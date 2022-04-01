@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form Danhmuc\frmKhachhangcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Danhmuc\frmKhachhangcs.Designer.cs">
+      <DependentUpon>frmKhachhangcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form Baocao\" />
-    <Folder Include="Form Danhmuc\" />
     <Folder Include="Form Hoadon\" />
     <Folder Include="Form Timkiem\" />
   </ItemGroup>

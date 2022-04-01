@@ -8,5 +8,6 @@ namespace CSLT2_Suachuagiaydep
 {
     internal class Functions
     {
+        //fdsfasd
     }
 }

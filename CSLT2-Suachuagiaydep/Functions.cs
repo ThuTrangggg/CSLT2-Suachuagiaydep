@@ -8,7 +8,7 @@ namespace CSLT2_Suachuagiaydep
 {
     internal class Functions
     {
-        //hello
+        //hello///dsfasdfd
         //fdsfasd
     }
 }

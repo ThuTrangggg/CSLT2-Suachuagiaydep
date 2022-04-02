@@ -16,5 +16,15 @@ namespace CSLT2_Suachuagiaydep
         {
             InitializeComponent();
         }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            Functions.connect();
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

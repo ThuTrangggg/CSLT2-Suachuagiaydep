@@ -24,7 +24,8 @@ namespace CSLT2_Suachuagiaydep
 
         private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frmBaocao a = new frmBaocao();
+            a.Show();
         }
     }
 }

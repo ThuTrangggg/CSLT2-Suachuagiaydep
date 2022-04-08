@@ -28,18 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.tblHDduaxuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baocaoHDduaxuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baocaoHDduaxuong = new CSLT2_Suachuagiaydep.FormBaocao.BaocaoHDduaxuong();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dtpNgay = new System.Windows.Forms.DateTimePicker();
-            this.dtagridview = new System.Windows.Forms.DataGridView();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnThongke = new System.Windows.Forms.Button();
+            this.dtpNgaydua = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tblHDduaxuongTableAdapter = new CSLT2_Suachuagiaydep.FormBaocao.BaocaoHDduaxuongTableAdapters.tblHDduaxuongTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHDduaxuongBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baocaoHDduaxuongBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baocaoHDduaxuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtagridview)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tblHDduaxuongBindingSource
+            // 
+            this.tblHDduaxuongBindingSource.DataMember = "tblHDduaxuong";
+            this.tblHDduaxuongBindingSource.DataSource = this.baocaoHDduaxuongBindingSource;
+            // 
+            // baocaoHDduaxuongBindingSource
+            // 
+            this.baocaoHDduaxuongBindingSource.DataSource = this.baocaoHDduaxuong;
+            this.baocaoHDduaxuongBindingSource.Position = 0;
+            // 
+            // baocaoHDduaxuong
+            // 
+            this.baocaoHDduaxuong.DataSetName = "BaocaoHDduaxuong";
+            this.baocaoHDduaxuong.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView1
             // 
@@ -61,9 +84,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.dtpNgay);
-            this.tabPage1.Controls.Add(this.dtagridview);
+            this.tabPage1.Controls.Add(this.reportViewer1);
+            this.tabPage1.Controls.Add(this.btnThongke);
+            this.tabPage1.Controls.Add(this.dtpNgaydua);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -72,20 +95,36 @@
             this.tabPage1.Text = "Báo cáo HĐ và tổng tiền ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dtpNgay
+            // reportViewer1
             // 
-            this.dtpNgay.Location = new System.Drawing.Point(17, 24);
-            this.dtpNgay.Name = "dtpNgay";
-            this.dtpNgay.Size = new System.Drawing.Size(200, 20);
-            this.dtpNgay.TabIndex = 4;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.tblHDduaxuongBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CSLT2_Suachuagiaydep.FormBaocao.BaocaoHDduaxuong.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(17, 36);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(551, 252);
+            this.reportViewer1.TabIndex = 7;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load_1);
             // 
-            // dtagridview
+            // btnThongke
             // 
-            this.dtagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtagridview.Location = new System.Drawing.Point(258, 24);
-            this.dtagridview.Name = "dtagridview";
-            this.dtagridview.Size = new System.Drawing.Size(296, 150);
-            this.dtagridview.TabIndex = 2;
+            this.btnThongke.Location = new System.Drawing.Point(241, 3);
+            this.btnThongke.Name = "btnThongke";
+            this.btnThongke.Size = new System.Drawing.Size(121, 23);
+            this.btnThongke.TabIndex = 6;
+            this.btnThongke.Text = "Thống kê";
+            this.btnThongke.UseVisualStyleBackColor = true;
+            this.btnThongke.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dtpNgaydua
+            // 
+            this.dtpNgaydua.Location = new System.Drawing.Point(17, 6);
+            this.dtpNgaydua.Name = "dtpNgaydua";
+            this.dtpNgaydua.Size = new System.Drawing.Size(200, 20);
+            this.dtpNgaydua.TabIndex = 4;
+            this.dtpNgaydua.Value = new System.DateTime(2022, 4, 8, 0, 0, 0, 0);
             // 
             // tabPage2
             // 
@@ -97,15 +136,9 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // tblHDduaxuongTableAdapter
             // 
-            this.button1.Location = new System.Drawing.Point(51, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tblHDduaxuongTableAdapter.ClearBeforeFill = true;
             // 
             // frmBaocao
             // 
@@ -117,10 +150,12 @@
             this.Name = "frmBaocao";
             this.Text = "frmBaocao";
             this.Load += new System.EventHandler(this.frmBaocao_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tblHDduaxuongBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baocaoHDduaxuongBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baocaoHDduaxuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtagridview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,8 +166,12 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dtagridview;
-        private System.Windows.Forms.DateTimePicker dtpNgay;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dtpNgaydua;
+        private System.Windows.Forms.Button btnThongke;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource baocaoHDduaxuongBindingSource;
+        private FormBaocao.BaocaoHDduaxuong baocaoHDduaxuong;
+        private System.Windows.Forms.BindingSource tblHDduaxuongBindingSource;
+        private FormBaocao.BaocaoHDduaxuongTableAdapters.tblHDduaxuongTableAdapter tblHDduaxuongTableAdapter;
     }
 }

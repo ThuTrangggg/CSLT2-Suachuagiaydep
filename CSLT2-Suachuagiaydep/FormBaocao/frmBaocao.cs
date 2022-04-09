@@ -22,12 +22,12 @@ namespace CSLT2_Suachuagiaydep
         private void frmBaocao_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baocaoHDduaxuong.tblHDduaxuong' table. You can move, or remove it, as needed.
-           // this.tblHDduaxuongTableAdapter.Fill(this.baocaoHDduaxuong.tblHDduaxuong);
+            this.tblHDduaxuongTableAdapter.Fill(this.baocaoHDduaxuong.tblHDduaxuong);
             // TODO: This line of code loads data into the 'bcaoSPdatra.Bcaodanhsachhd' table. You can move, or remove it, as needed.
-           // this.bcaodanhsachhdTableAdapter.Fill(this.bcaoSPdatra.Bcaodanhsachhd,dtpSPdatra.Value);
+            this.bcaodanhsachhdTableAdapter.Fill(this.bcaoSPdatra.Bcaodanhsachhd,dtpSPdatra.Value);
             //this.reportViewer1.RefreshReport();
-           // this.reportViewer1.RefreshReport();
-            //this.rptSPdatra.RefreshReport();
+            this.reportViewer1.RefreshReport();
+            this.rptSPdatra.RefreshReport();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,9 +45,10 @@ namespace CSLT2_Suachuagiaydep
             //Đường dẫn báo cáo
             reportViewer1.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\FormBaocao\\BaocaoHDduaxuong.rdlc";
             //Nếu có dữ liệu
-            
-                //Tạo nguồn dữ liệu cho báo cáo
-                ReportDataSource rds = new ReportDataSource();
+            MessageBox.Show("Có "+ds.Tables[0].Rows.Count.ToString()+" bản ghi thoả mãn");
+
+            //Tạo nguồn dữ liệu cho báo cáo
+            ReportDataSource rds = new ReportDataSource();
                 rds.Name = "BaocaoHDduaxuongDataSet";
                 rds.Value = ds.Tables[0];
                 //Xóa dữ liệu của báo cáo cũ trong trường hợp người dùng thực hiện câu truy vấn khác
@@ -80,9 +81,7 @@ namespace CSLT2_Suachuagiaydep
             //Thiết lập thông số liên quan đến báo cáo
             rptSPdatra.ProcessingMode = ProcessingMode.Local; //sử dụng dữ liệu ở local
             rptSPdatra.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\FormBaocao\\BaocaoSPdatra.rdlc";
-            MessageBox.Show(ds.Tables[0].Rows.Count.ToString());
-           
-          
+            MessageBox.Show("Có "+ds.Tables[0].Rows.Count.ToString()+" bản ghi thoả mãn");
                 //Tạo nguồn dữ liệu cho báo cáo
                 ReportDataSource rds = new ReportDataSource();
                 rds.Name = "datasetbcaosp";

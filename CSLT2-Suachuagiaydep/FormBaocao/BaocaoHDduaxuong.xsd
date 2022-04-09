@@ -75,7 +75,7 @@ SELECT MaHDdua, MaNV, Maxuong, Ngaydua, Tongtien FROM tblHDduaxuong WHERE (MaHDd
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="BaocaoHDduaxuong" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="BaocaoHDduaxuong" msprop:Generator_DataSetName="BaocaoHDduaxuong">
+  <xs:element name="BaocaoHDduaxuong" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BaocaoHDduaxuong" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BaocaoHDduaxuong">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tblHDduaxuong" msprop:Generator_RowEvHandlerName="tblHDduaxuongRowChangeEventHandler" msprop:Generator_RowDeletedName="tblHDduaxuongRowDeleted" msprop:Generator_RowDeletingName="tblHDduaxuongRowDeleting" msprop:Generator_RowEvArgName="tblHDduaxuongRowChangeEvent" msprop:Generator_TablePropName="tblHDduaxuong" msprop:Generator_RowChangedName="tblHDduaxuongRowChanged" msprop:Generator_RowChangingName="tblHDduaxuongRowChanging" msprop:Generator_TableClassName="tblHDduaxuongDataTable" msprop:Generator_RowClassName="tblHDduaxuongRow" msprop:Generator_TableVarName="tabletblHDduaxuong" msprop:Generator_UserTableName="tblHDduaxuong">

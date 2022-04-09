@@ -281,7 +281,7 @@
                             <TextRun>
                               <Value>=Fields!Ngaydua.Value</Value>
                               <Style>
-                                <Format>d</Format>
+                                <Format>dd/MM/yyyy</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -355,7 +355,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>BaocaoHDduaxuongDataSet</DataSetName>
         <Top>0.86995cm</Top>
         <Left>2.08829cm</Left>
         <Height>1.46458cm</Height>
@@ -418,7 +418,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>2.85433cm</Top>
-        <Left>13.37945cm</Left>
+        <Left>11.73903cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>
@@ -504,7 +504,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="BaocaoHDduaxuongDataSet">
       <Query>
         <DataSourceName>BaocaoHDduaxuong</DataSourceName>
         <CommandText>/* Local Query */</CommandText>

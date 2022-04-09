@@ -34,11 +34,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ma HDdua</Value>
+                              <Value>Mã HĐ đưa</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -64,11 +66,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ma NV</Value>
+                              <Value>Mã nhân viên</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -94,11 +98,24 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Maxuong</Value>
+                              <Value>Mã xưởng</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -124,11 +141,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ngaydua</Value>
+                              <Value>Ngày đưa </Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -154,11 +173,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tongtien</Value>
+                              <Value>Tổng tiền</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -193,7 +214,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>MaHDdua</rd:DefaultName>
@@ -223,7 +246,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>MaNV</rd:DefaultName>
@@ -253,7 +278,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Maxuong</rd:DefaultName>
@@ -285,7 +312,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Ngaydua</rd:DefaultName>
@@ -315,7 +344,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Tongtien</rd:DefaultName>
@@ -373,14 +404,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tổng </Value>
+                <Value>Tổng tiền: </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                 </Style>
-              </TextRun>
-              <TextRun>
-                <Value>tiền:</Value>
-                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -390,7 +417,7 @@
         <Top>2.85433cm</Top>
         <Left>10.20974cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.89146cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -418,7 +445,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>2.85433cm</Top>
-        <Left>11.73903cm</Left>
+        <Left>12.20703cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>

@@ -27,5 +27,29 @@ namespace CSLT2_Suachuagiaydep
             frmBaocao a = new frmBaocao();
             a.Show();
         }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSanpham a = new frmSanpham();
+            a.Show();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKhachhangcs a = new frmKhachhangcs();
+            a.Show();
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhanvien a = new frmNhanvien();
+            a.Show();
+        }
+
+        private void xưởngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmXuong a = new frmXuong();
+            a.Show();
+        }
     }
 }

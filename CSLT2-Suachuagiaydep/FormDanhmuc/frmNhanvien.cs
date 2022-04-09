@@ -16,5 +16,10 @@ namespace CSLT2_Suachuagiaydep
         {
             InitializeComponent();
         }
+
+        private void frmNhanvien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

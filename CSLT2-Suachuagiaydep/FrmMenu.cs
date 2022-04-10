@@ -24,8 +24,8 @@ namespace CSLT2_Suachuagiaydep
 
         private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBaocao a = new frmBaocao();
-            a.Show();
+            //frmBaocao a = new frmBaocao();
+//a.Show();
         }
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +49,18 @@ namespace CSLT2_Suachuagiaydep
         private void xưởngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmXuong a = new frmXuong();
+            a.Show();
+        }
+
+        private void danhSáchSảnPhẩmChưaTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBaocao.frmBaocaoSPchuatra a = new FormBaocao.frmBaocaoSPchuatra();
+            a.Show();
+        }
+
+        private void danhSáchHoáĐơnĐưaXưởngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBaocao.frmBcaoHDduaxuong a = new FormBaocao.frmBcaoHDduaxuong();
             a.Show();
         }
     }

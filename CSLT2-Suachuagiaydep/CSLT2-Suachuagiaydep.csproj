@@ -79,33 +79,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormBaocao\BaocaoHDduaxuong.cs">
+    <Compile Include="DatasetReport\BaocaoHDduaxuong.cs">
       <DependentUpon>BaocaoHDduaxuong.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormBaocao\BaocaoHDduaxuong.Designer.cs">
+    <Compile Include="DatasetReport\BaocaoHDduaxuong.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaocaoHDduaxuong.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormBaocao\BcaoSPdatra.cs">
-      <DependentUpon>BcaoSPdatra.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FormBaocao\BcaoSPdatra.Designer.cs">
+    <Compile Include="DatasetReport\BCaoSPchuatrakhach.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BcaoSPdatra.xsd</DependentUpon>
+      <DependentUpon>BCaoSPchuatrakhach.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetReport\BcaoSPxuongchuatra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BcaoSPxuongchuatra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaocao\frmBaocaoSPchuatra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaocao\frmBaocaoSPchuatra.Designer.cs">
+      <DependentUpon>frmBaocaoSPchuatra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaocao\frmBcaoHDduaxuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaocao\frmBcaoHDduaxuong.Designer.cs">
+      <DependentUpon>frmBcaoHDduaxuong.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDanhmuc\frmKhachhangcs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDanhmuc\frmKhachhangcs.Designer.cs">
       <DependentUpon>frmKhachhangcs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormBaocao\frmBaocao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBaocao\frmBaocao.Designer.cs">
-      <DependentUpon>frmBaocao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHoadon\frmHDduaxuong.cs">
       <SubType>Form</SubType>
@@ -182,31 +190,20 @@
       <DependentUpon>frmTimkiemSP.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyGiayDepDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyGiayDepDataSet.xsd</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FormBaocao\BaocaoHDduaxuong.rdlc">
+    <EmbeddedResource Include="DatasetReport\BaocaoHDduaxuong.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBaocao\BaocaoSPdatra.rdlc">
+    <EmbeddedResource Include="DatasetReport\BcaoSPxuongchuatra.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBaocao\frmBaocao.resx">
-      <DependentUpon>frmBaocao.cs</DependentUpon>
+    <EmbeddedResource Include="DatasetReport\RpBcaoSPchuatrakhach.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDanhmuc\frmKhachhangcs.resx">
-      <DependentUpon>frmKhachhangcs.cs</DependentUpon>
+    <EmbeddedResource Include="FormBaocao\frmBaocaoSPchuatra.resx">
+      <DependentUpon>frmBaocaoSPchuatra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDanhmuc\frmNhanvien.resx">
-      <DependentUpon>frmNhanvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDanhmuc\frmSanpham.resx">
-      <DependentUpon>frmSanpham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDanhmuc\frmXuong.resx">
-      <DependentUpon>frmXuong.cs</DependentUpon>
+    <EmbeddedResource Include="FormBaocao\frmBcaoHDduaxuong.resx">
+      <DependentUpon>frmBcaoHDduaxuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
@@ -220,27 +217,38 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="FormBaocao\BaocaoHDduaxuong.xsc">
+    <None Include="DatasetReport\BaocaoHDduaxuong.xsc">
       <DependentUpon>BaocaoHDduaxuong.xsd</DependentUpon>
     </None>
-    <None Include="FormBaocao\BaocaoHDduaxuong.xsd">
+    <None Include="DatasetReport\BaocaoHDduaxuong.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BaocaoHDduaxuong.Designer.cs</LastGenOutput>
     </None>
-    <None Include="FormBaocao\BaocaoHDduaxuong.xss">
+    <None Include="DatasetReport\BaocaoHDduaxuong.xss">
       <DependentUpon>BaocaoHDduaxuong.xsd</DependentUpon>
     </None>
-    <None Include="FormBaocao\BcaoSPdatra.xsc">
-      <DependentUpon>BcaoSPdatra.xsd</DependentUpon>
+    <None Include="DatasetReport\BCaoSPchuatrakhach.xsc">
+      <DependentUpon>BCaoSPchuatrakhach.xsd</DependentUpon>
     </None>
-    <None Include="FormBaocao\BcaoSPdatra.xsd">
+    <None Include="DatasetReport\BCaoSPchuatrakhach.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BcaoSPdatra.Designer.cs</LastGenOutput>
+      <LastGenOutput>BCaoSPchuatrakhach.Designer.cs</LastGenOutput>
     </None>
-    <None Include="FormBaocao\BcaoSPdatra.xss">
-      <DependentUpon>BcaoSPdatra.xsd</DependentUpon>
+    <None Include="DatasetReport\BCaoSPchuatrakhach.xss">
+      <DependentUpon>BCaoSPchuatrakhach.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetReport\BcaoSPxuongchuatra.xsc">
+      <DependentUpon>BcaoSPxuongchuatra.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetReport\BcaoSPxuongchuatra.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BcaoSPxuongchuatra.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatasetReport\BcaoSPxuongchuatra.xss">
+      <DependentUpon>BcaoSPxuongchuatra.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -252,17 +260,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyGiayDepDataSet.xsc">
-      <DependentUpon>QuanLyGiayDepDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyGiayDepDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyGiayDepDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyGiayDepDataSet.xss">
-      <DependentUpon>QuanLyGiayDepDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

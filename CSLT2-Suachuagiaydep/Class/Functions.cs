@@ -15,7 +15,7 @@ namespace CSLT2_Suachuagiaydep
         public static void connect()
         {
             Conn = new SqlConnection();
-            connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\BTL_CSLT2\\CSLT2-Suachuagiaydep\\QuanLyGiayDep.mdf;Integrated Security=True;Connect Timeout=30";
+            connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\QuanLyGiayDep.mdf;Integrated Security=True;Connect Timeout=30";
             Conn.ConnectionString = connString;
             Conn.Open();
         }
@@ -87,21 +87,6 @@ namespace CSLT2_Suachuagiaydep
             a.Close();
             return ma;
         }
-        public static string ConvertDateTime(string d)
-        {
-            string[] parts = d.Split('/');
-            string dt = String.Format("{0}/{1}/{2}", parts[1], parts[0], parts[2]);
-            return dt;
-        }
-        public static bool IsDate(string d)
-        {
-            string[] parts = d.Split('/');
-            if ((Convert.ToInt32(parts[0]) >= 1) && (Convert.ToInt32(parts[0]) <= 31) && (Convert.ToInt32(parts[1]) >= 1) && (Convert.ToInt32(parts[1]) <= 12) && (Convert.ToInt32(parts[2]) >= 1900))
-                return true;
-            else
-                return false;
-        }
-
 
     }
 }

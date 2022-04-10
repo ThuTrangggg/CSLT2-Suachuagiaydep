@@ -39,8 +39,12 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnBoqua = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewKH = new System.Windows.Forms.DataGridView();
+            this.txtMakhach = new System.Windows.Forms.TextBox();
+            this.txtTenkhach = new System.Windows.Forms.TextBox();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
+            this.mskDienthoai = new System.Windows.Forms.MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThem
@@ -51,6 +55,7 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label1
             // 
@@ -75,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(409, 136);
+            this.label3.Location = new System.Drawing.Point(478, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 1;
@@ -93,7 +98,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(409, 79);
+            this.label5.Location = new System.Drawing.Point(478, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 1;
@@ -107,6 +112,7 @@
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -116,6 +122,7 @@
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -125,6 +132,7 @@
             this.btnLuu.TabIndex = 0;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnBoqua
             // 
@@ -134,6 +142,7 @@
             this.btnBoqua.TabIndex = 0;
             this.btnBoqua.Text = "Bỏ qua";
             this.btnBoqua.UseVisualStyleBackColor = true;
+            this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
             // btnDong
             // 
@@ -143,23 +152,58 @@
             this.btnDong.TabIndex = 0;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
-            // dataGridView1
+            // dataGridViewKH
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 287);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(771, 204);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridViewKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKH.Location = new System.Drawing.Point(79, 287);
+            this.dataGridViewKH.Name = "dataGridViewKH";
+            this.dataGridViewKH.RowHeadersWidth = 51;
+            this.dataGridViewKH.RowTemplate.Height = 24;
+            this.dataGridViewKH.Size = new System.Drawing.Size(771, 204);
+            this.dataGridViewKH.TabIndex = 2;
+            this.dataGridViewKH.Click += new System.EventHandler(this.dataGridViewKH_Click);
+            // 
+            // txtMakhach
+            // 
+            this.txtMakhach.Location = new System.Drawing.Point(221, 79);
+            this.txtMakhach.Name = "txtMakhach";
+            this.txtMakhach.Size = new System.Drawing.Size(115, 22);
+            this.txtMakhach.TabIndex = 3;
+            // 
+            // txtTenkhach
+            // 
+            this.txtTenkhach.Location = new System.Drawing.Point(221, 133);
+            this.txtTenkhach.Name = "txtTenkhach";
+            this.txtTenkhach.Size = new System.Drawing.Size(216, 22);
+            this.txtTenkhach.TabIndex = 3;
+            // 
+            // txtDiachi
+            // 
+            this.txtDiachi.Location = new System.Drawing.Point(549, 79);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(100, 22);
+            this.txtDiachi.TabIndex = 3;
+            // 
+            // mskDienthoai
+            // 
+            this.mskDienthoai.Location = new System.Drawing.Point(569, 133);
+            this.mskDienthoai.Mask = "(999) 000-0000";
+            this.mskDienthoai.Name = "mskDienthoai";
+            this.mskDienthoai.Size = new System.Drawing.Size(122, 22);
+            this.mskDienthoai.TabIndex = 4;
             // 
             // frmKhachhangcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 560);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.mskDienthoai);
+            this.Controls.Add(this.txtDiachi);
+            this.Controls.Add(this.txtTenkhach);
+            this.Controls.Add(this.txtMakhach);
+            this.Controls.Add(this.dataGridViewKH);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -173,7 +217,8 @@
             this.Controls.Add(this.btnThem);
             this.Name = "frmKhachhangcs";
             this.Text = "frmKhachhangcs";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmKhachhangcs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +237,10 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnBoqua;
         private System.Windows.Forms.Button btnDong;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewKH;
+        private System.Windows.Forms.TextBox txtMakhach;
+        private System.Windows.Forms.TextBox txtTenkhach;
+        private System.Windows.Forms.TextBox txtDiachi;
+        private System.Windows.Forms.MaskedTextBox mskDienthoai;
     }
 }

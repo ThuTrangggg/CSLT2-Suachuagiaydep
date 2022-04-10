@@ -87,6 +87,21 @@ namespace CSLT2_Suachuagiaydep
             a.Close();
             return ma;
         }
+        public static string ConvertDateTime(string d)
+        {
+            string[] parts = d.Split('/');
+            string dt = String.Format("{0}/{1}/{2}", parts[1], parts[0], parts[2]);
+            return dt;
+        }
+        public static bool IsDate(string d)
+        {
+            string[] parts = d.Split('/');
+            if ((Convert.ToInt32(parts[0]) >= 1) && (Convert.ToInt32(parts[0]) <= 31) && (Convert.ToInt32(parts[1]) >= 1) && (Convert.ToInt32(parts[1]) <= 12) && (Convert.ToInt32(parts[2]) >= 1900))
+                return true;
+            else
+                return false;
+        }
+
 
     }
 }

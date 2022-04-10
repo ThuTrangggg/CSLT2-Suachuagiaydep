@@ -79,6 +79,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatasetReport\BcaoHDnhanhang.cs">
+      <DependentUpon>BcaoHDnhanhang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetReport\BcaoHDnhanhang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BcaoHDnhanhang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatasetReport\BaocaoHDduaxuong.cs">
       <DependentUpon>BaocaoHDduaxuong.xsd</DependentUpon>
     </Compile>
@@ -109,11 +117,17 @@
     <Compile Include="FormBaocao\frmBcaoHDduaxuong.Designer.cs">
       <DependentUpon>frmBcaoHDduaxuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDanhmuc\frmKhachhangcs.cs">
+    <Compile Include="FormBaocao\frmBcaoHDnhanhang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDanhmuc\frmKhachhangcs.Designer.cs">
-      <DependentUpon>frmKhachhangcs.cs</DependentUpon>
+    <Compile Include="FormBaocao\frmBcaoHDnhanhang.Designer.cs">
+      <DependentUpon>frmBcaoHDnhanhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhmuc\frmKhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhmuc\frmKhachhang.Designer.cs">
+      <DependentUpon>frmKhachhang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHoadon\frmHDduaxuong.cs">
       <SubType>Form</SubType>
@@ -190,6 +204,7 @@
       <DependentUpon>frmTimkiemSP.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DatasetReport\BcaoHDnhanhangrp.rdlc" />
     <EmbeddedResource Include="DatasetReport\BaocaoHDduaxuong.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -205,6 +220,12 @@
     <EmbeddedResource Include="FormBaocao\frmBcaoHDduaxuong.resx">
       <DependentUpon>frmBcaoHDduaxuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBaocao\frmBcaoHDnhanhang.resx">
+      <DependentUpon>frmBcaoHDnhanhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhmuc\frmKhachhang.resx">
+      <DependentUpon>frmKhachhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +238,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DatasetReport\BcaoHDnhanhang.xsc">
+      <DependentUpon>BcaoHDnhanhang.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetReport\BcaoHDnhanhang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BcaoHDnhanhang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatasetReport\BcaoHDnhanhang.xss">
+      <DependentUpon>BcaoHDnhanhang.xsd</DependentUpon>
+    </None>
     <None Include="DatasetReport\BaocaoHDduaxuong.xsc">
       <DependentUpon>BaocaoHDduaxuong.xsd</DependentUpon>
     </None>

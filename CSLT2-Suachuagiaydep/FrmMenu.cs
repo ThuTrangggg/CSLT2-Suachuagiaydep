@@ -36,7 +36,7 @@ namespace CSLT2_Suachuagiaydep
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmKhachhangcs a = new frmKhachhangcs();
+            frmKhachhang a = new frmKhachhang();
             a.Show();
         }
 
@@ -61,6 +61,12 @@ namespace CSLT2_Suachuagiaydep
         private void danhSáchHoáĐơnĐưaXưởngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormBaocao.frmBcaoHDduaxuong a = new FormBaocao.frmBcaoHDduaxuong();
+            a.Show();
+        }
+
+        private void mnuBcaoHDnhan_Click(object sender, EventArgs e)
+        {
+            FormBaocao.frmBcaoHDnhanhang a = new FormBaocao.frmBcaoHDnhanhang();
             a.Show();
         }
     }

@@ -26,11 +26,10 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
             this.rpvKHmax.RefreshReport();
             rpvKH.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoKHrpv.rdlc";
             con.ConnectionString = Properties.Settings.Default.QuanLyGiayDepConnectionString;
-
         }
         private void btnThongke_Click(object sender, EventArgs e)
         {
-            if (rdoQuy.Checked == false && rdoThang.Checked == false &&rdoNam.Checked==false|| cboLuachon.Text == "")
+            if (rdoQuy.Checked == false && rdoThang.Checked == false || cboLuachon.Text == "")
             {
                 MessageBox.Show("Hãy nhập lựa chọn");
                 return;
@@ -43,6 +42,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
                 cmd.Connection = con;
                 cmd.Parameters.Add(new SqlParameter("@ngaynhan",'0'));
                 cmd.Parameters.Add(new SqlParameter("@ngaynhanquy", cboLuachon.Text));
+
                 DataSet ds = new DataSet();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 adp.Fill(ds);
@@ -64,7 +64,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = con;
                 cmd.Parameters.Add(new SqlParameter("@ngaynhanquy",'0'));
-                cmd.Parameters.Add(new SqlParameter("@ngaynhan",Convert.ToString(12)));
+                cmd.Parameters.Add(new SqlParameter("@ngaynhan",cboLuachon.Text));
                 DataSet ds = new DataSet();
                 SqlDataAdapter dap = new SqlDataAdapter(cmd);
                 dap.Fill(ds);
@@ -107,46 +107,8 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
                 cboLuachon.Items.Add("11");
                 cboLuachon.Items.Add("12");
             }
-            if(rdoNam.Checked==true)
-            {
-                cboLuachon.Items.Clear();
-                cboLuachon.Items.Add("2022");
-                cboLuachon.Items.Add("2021");
-            }
         }
-        private void cboLuachonmax_DropDown(object sender, EventArgs e)
-        {
-            if (rdoQuymax.Checked == true)
-            {
-                cboLuachonmax.Items.Clear();
-                cboLuachonmax.Items.Add("1");
-                cboLuachonmax.Items.Add("2");
-                cboLuachonmax.Items.Add("3");
-                cboLuachonmax.Items.Add("4");
-            }
-            if (rdoThangmax.Checked == true)
-            {
-                cboLuachonmax.Items.Clear();
-                cboLuachonmax.Items.Add("1");
-                cboLuachonmax.Items.Add("2");
-                cboLuachonmax.Items.Add("3");
-                cboLuachonmax.Items.Add("4");
-                cboLuachonmax.Items.Add("5");
-                cboLuachonmax.Items.Add("6");
-                cboLuachonmax.Items.Add("7");
-                cboLuachonmax.Items.Add("8");
-                cboLuachonmax.Items.Add("9");
-                cboLuachonmax.Items.Add("10");
-                cboLuachonmax.Items.Add("11");
-                cboLuachonmax.Items.Add("12");
-            }
-            if(rdoNammax.Checked==true)
-            {
-                cboLuachonmax.Items.Clear();
-                cboLuachonmax.Items.Add("2022");
-                cboLuachonmax.Items.Add("2021");
-            }
-        }
+        
         private void rdoThang_CheckedChanged(object sender, EventArgs e)
         {
             cboLuachon.Text = "";
@@ -161,18 +123,47 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
             cboLuachon.Text = "2022";
 
         }
-        private void rdoThangmax_CheckedChanged(object sender, EventArgs e)
+
+        private void rdoTongtien_CheckedChanged(object sender, EventArgs e)
         {
-            cboLuachonmax.Text = "";
+            rpvKHmax.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoKHmaxtongtien.rdlc";
+            String sql = "Select top 3 a.Makhach,Tenkhach,sum(tongtien) from tblHDnhanhang a, tblKhachhang b " +
+                "where a.Makhach = b.Makhach " +
+                "group by a.Makhach,Tenkhach order by sum(tongtien) desc";
+            SqlDataAdapter adp = new SqlDataAdapter(sql, con);
+            DataSet ds = new DataSet();
+            adp.Fill(ds);
+            //Tạo nguồn dữ liệu cho báo cáo
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "KHMaxtongtien";
+            rds.Value = ds.Tables[0];
+            //Xóa dữ liệu của báo cáo cũ trong trường hợp người dùng thực hiện câu truy vấn khác
+            rpvKHmax.LocalReport.DataSources.Clear();
+            //Add dữ liệu vào báo cáo
+            rpvKHmax.LocalReport.DataSources.Add(rds);
+            //Refresh lại báo cáo
+            rpvKHmax.RefreshReport();
         }
-        private void rdoQuymax_CheckedChanged(object sender, EventArgs e)
+
+        private void rdoSoluongHD_CheckedChanged(object sender, EventArgs e)
         {
-            cboLuachonmax.Text = "";
-        }
-        private void rdoNammax_CheckedChanged(object sender, EventArgs e)
-        {
-            cboLuachonmax.Text = "";
-            cboLuachonmax.Text = "2022";
+            rpvKHmax.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoKHmaxsoluong.rdlc";
+            String sql = "Select top 3 a.Makhach,Tenkhach,count(mahdnhan) from tblHDnhanhang a, tblKhachhang b " +
+                "where a.Makhach = b.Makhach " +
+                "group by a.Makhach,Tenkhach order by count(mahdnhan) desc";
+            SqlDataAdapter adp = new SqlDataAdapter(sql, con);
+            DataSet ds = new DataSet();
+            adp.Fill(ds);
+            //Tạo nguồn dữ liệu cho báo cáo
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "BcaoKHmaxsoluongds";
+            rds.Value = ds.Tables[0];
+            //Xóa dữ liệu của báo cáo cũ trong trường hợp người dùng thực hiện câu truy vấn khác
+            rpvKHmax.LocalReport.DataSources.Clear();
+            //Add dữ liệu vào báo cáo
+            rpvKHmax.LocalReport.DataSources.Add(rds);
+            //Refresh lại báo cáo
+            rpvKHmax.RefreshReport();
         }
     }
 }

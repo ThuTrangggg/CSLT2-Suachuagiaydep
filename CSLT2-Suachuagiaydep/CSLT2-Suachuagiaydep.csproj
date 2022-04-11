@@ -79,6 +79,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatasetReport\BcaoKHDataset.cs">
+      <DependentUpon>BcaoKHDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatasetReport\BcaoKHDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BcaoSPxuongchuatra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetReport\KHmaxtongtien.cs">
+      <DependentUpon>KHmaxtongtien.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormBaocao\frmBaocaoSPchuatra.cs">
       <SubType>Form</SubType>
@@ -214,9 +220,22 @@
     <Compile Include="FormTimkiem\frmTimkiemSP.Designer.cs">
       <DependentUpon>frmTimkiemSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatasetReport\KHmaxtongtien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KHmaxtongtien.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DatasetReport\BcaoHDnhanhangrp.rdlc" />
+    <EmbeddedResource Include="DatasetReport\BcaoHDnhanhangrp.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatasetReport\BaocaoHDduaxuong.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatasetReport\BcaoKHmaxsoluong.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatasetReport\BcaoKHmaxtongtien.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="DatasetReport\BcaoKHrpv.rdlc">
@@ -243,8 +262,14 @@
     <EmbeddedResource Include="FormDanhmuc\frmKhachhang.resx">
       <DependentUpon>frmKhachhang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhmuc\frmNhanvien.resx">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDanhmuc\frmSanpham.resx">
       <DependentUpon>frmSanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhmuc\frmXuong.resx">
+      <DependentUpon>frmXuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHoadon\frmHDnhanhang.resx">
       <DependentUpon>frmHDnhanhang.cs</DependentUpon>
@@ -260,6 +285,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DatasetReport\BcaoKHDataset.xsc">
       <DependentUpon>BcaoKHDataset.xsd</DependentUpon>
@@ -316,6 +342,17 @@
     <None Include="DatasetReport\BcaoSPxuongchuatra.xss">
       <DependentUpon>BcaoSPxuongchuatra.xsd</DependentUpon>
     </None>
+    <None Include="DatasetReport\KHmaxtongtien.xsc">
+      <DependentUpon>KHmaxtongtien.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetReport\KHmaxtongtien.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KHmaxtongtien.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetReport\KHmaxtongtien.xss">
+      <DependentUpon>KHmaxtongtien.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -351,6 +388,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyGiayDep.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\anh2.jpg" />
+    <None Include="Resources\anh1.jpg" />
+    <None Include="Resources\Save.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

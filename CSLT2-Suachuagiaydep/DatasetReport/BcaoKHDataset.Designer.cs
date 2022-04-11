@@ -414,13 +414,6 @@ namespace CSLT2_Suachuagiaydep.DatasetReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BcaoKHRow FindByMakhach(string Makhach) {
-                return ((BcaoKHRow)(this.Rows.Find(new object[] {
-                            Makhach})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 BcaoKHDataTable cln = ((BcaoKHDataTable)(base.Clone()));
                 cln.InitVars();
@@ -456,10 +449,7 @@ namespace CSLT2_Suachuagiaydep.DatasetReport {
                 base.Columns.Add(this.columnDienthoai);
                 this.columnNgaynhan = new global::System.Data.DataColumn("Ngaynhan", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNgaynhan);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMakhach}, true));
                 this.columnMakhach.AllowDBNull = false;
-                this.columnMakhach.Unique = true;
                 this.columnMakhach.MaxLength = 50;
                 this.columnTenkhach.AllowDBNull = false;
                 this.columnTenkhach.MaxLength = 50;
@@ -846,20 +836,27 @@ namespace CSLT2_Suachuagiaydep.DatasetReport.BcaoKHDatasetTableAdapters {
             this._commandCollection[0].CommandText = "dbo.BcaoKH";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ngaynhan", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ngaynhan", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ngaynhanquy", global::System.Data.SqlDbType.NVarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BcaoKHDataset.BcaoKHDataTable dataTable, global::System.Nullable<global::System.DateTime> ngaynhan) {
+        public virtual int Fill(BcaoKHDataset.BcaoKHDataTable dataTable, global::System.Nullable<double> ngaynhan, string ngaynhanquy) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ngaynhan.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(ngaynhan.Value));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((double)(ngaynhan.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ngaynhanquy == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(ngaynhanquy));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -872,13 +869,19 @@ namespace CSLT2_Suachuagiaydep.DatasetReport.BcaoKHDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BcaoKHDataset.BcaoKHDataTable GetData(global::System.Nullable<global::System.DateTime> ngaynhan) {
+        public virtual BcaoKHDataset.BcaoKHDataTable GetData(global::System.Nullable<double> ngaynhan, string ngaynhanquy) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ngaynhan.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(ngaynhan.Value));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((double)(ngaynhan.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ngaynhanquy == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(ngaynhanquy));
             }
             BcaoKHDataset.BcaoKHDataTable dataTable = new BcaoKHDataset.BcaoKHDataTable();
             this.Adapter.Fill(dataTable);

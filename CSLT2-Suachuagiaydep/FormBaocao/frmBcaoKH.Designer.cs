@@ -28,27 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.bcaoKHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bcaoKHDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bcaoKHDataset = new CSLT2_Suachuagiaydep.DatasetReport.BcaoKHDataset();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.rpvKH = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnThongke = new System.Windows.Forms.Button();
             this.cboLuachon = new System.Windows.Forms.ComboBox();
             this.rdoQuy = new System.Windows.Forms.RadioButton();
-            this.rdoNam = new System.Windows.Forms.RadioButton();
             this.rdoThang = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnThongkeMax = new System.Windows.Forms.Button();
-            this.cboLuachonmax = new System.Windows.Forms.ComboBox();
-            this.rdoNammax = new System.Windows.Forms.RadioButton();
-            this.rdoQuymax = new System.Windows.Forms.RadioButton();
-            this.rdoThangmax = new System.Windows.Forms.RadioButton();
+            this.rdoSoluongHD = new System.Windows.Forms.RadioButton();
+            this.rdoTongtien = new System.Windows.Forms.RadioButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.rpvKHmax = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.BcaoKHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bcaoKHTableAdapter = new CSLT2_Suachuagiaydep.DatasetReport.BcaoKHDatasetTableAdapters.BcaoKHTableAdapter();
+            this.bcaoKHDatasetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bcaoHDnhanhang = new CSLT2_Suachuagiaydep.DatasetReport.BcaoHDnhanhang();
+            this.tblHDnhanhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblHDnhanhangTableAdapter = new CSLT2_Suachuagiaydep.DatasetReport.BcaoHDnhanhangTableAdapters.tblHDnhanhangTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDataset)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BcaoKHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDnhanhang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHDnhanhangBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bcaoKHBindingSource1
+            // 
+            this.bcaoKHBindingSource1.DataMember = "BcaoKH";
+            this.bcaoKHBindingSource1.DataSource = this.bcaoKHDatasetBindingSource;
+            // 
+            // bcaoKHDatasetBindingSource
+            // 
+            this.bcaoKHDatasetBindingSource.DataSource = this.bcaoKHDataset;
+            this.bcaoKHDatasetBindingSource.Position = 0;
+            // 
+            // bcaoKHDataset
+            // 
+            this.bcaoKHDataset.DataSetName = "BcaoKHDataset";
+            this.bcaoKHDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabControl1
             // 
@@ -66,7 +96,6 @@
             this.tabPage1.Controls.Add(this.btnThongke);
             this.tabPage1.Controls.Add(this.cboLuachon);
             this.tabPage1.Controls.Add(this.rdoQuy);
-            this.tabPage1.Controls.Add(this.rdoNam);
             this.tabPage1.Controls.Add(this.rdoThang);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -79,6 +108,10 @@
             // 
             // rpvKH
             // 
+            reportDataSource3.Name = "BcaoKHDS";
+            reportDataSource3.Value = this.bcaoKHBindingSource1;
+            this.rpvKH.LocalReport.DataSources.Add(reportDataSource3);
+            this.rpvKH.LocalReport.ReportEmbeddedResource = "CSLT2_Suachuagiaydep.DatasetReport.BcaoKHrpv.rdlc";
             this.rpvKH.Location = new System.Drawing.Point(30, 61);
             this.rpvKH.Name = "rpvKH";
             this.rpvKH.ServerReport.BearerToken = null;
@@ -87,7 +120,7 @@
             // 
             // btnThongke
             // 
-            this.btnThongke.Location = new System.Drawing.Point(478, 21);
+            this.btnThongke.Location = new System.Drawing.Point(392, 21);
             this.btnThongke.Name = "btnThongke";
             this.btnThongke.Size = new System.Drawing.Size(120, 23);
             this.btnThongke.TabIndex = 5;
@@ -98,7 +131,7 @@
             // cboLuachon
             // 
             this.cboLuachon.FormattingEnabled = true;
-            this.cboLuachon.Location = new System.Drawing.Point(369, 22);
+            this.cboLuachon.Location = new System.Drawing.Point(283, 22);
             this.cboLuachon.Name = "cboLuachon";
             this.cboLuachon.Size = new System.Drawing.Size(83, 21);
             this.cboLuachon.TabIndex = 4;
@@ -115,18 +148,6 @@
             this.rdoQuy.Text = "Quý";
             this.rdoQuy.UseVisualStyleBackColor = true;
             this.rdoQuy.CheckedChanged += new System.EventHandler(this.rdoQuy_CheckedChanged);
-            // 
-            // rdoNam
-            // 
-            this.rdoNam.AutoSize = true;
-            this.rdoNam.Location = new System.Drawing.Point(292, 23);
-            this.rdoNam.Name = "rdoNam";
-            this.rdoNam.Size = new System.Drawing.Size(47, 17);
-            this.rdoNam.TabIndex = 2;
-            this.rdoNam.TabStop = true;
-            this.rdoNam.Text = "Năm";
-            this.rdoNam.UseVisualStyleBackColor = true;
-            this.rdoNam.CheckedChanged += new System.EventHandler(this.rdoNam_CheckedChanged);
             // 
             // rdoThang
             // 
@@ -152,11 +173,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnThongkeMax);
-            this.tabPage2.Controls.Add(this.cboLuachonmax);
-            this.tabPage2.Controls.Add(this.rdoNammax);
-            this.tabPage2.Controls.Add(this.rdoQuymax);
-            this.tabPage2.Controls.Add(this.rdoThangmax);
+            this.tabPage2.Controls.Add(this.rdoSoluongHD);
+            this.tabPage2.Controls.Add(this.rdoTongtien);
             this.tabPage2.Controls.Add(this.textBox2);
             this.tabPage2.Controls.Add(this.rpvKHmax);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -167,59 +185,29 @@
             this.tabPage2.Text = "Danh sách khách hàng sử dụng dịch vụ nhiều nhất ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnThongkeMax
+            // rdoSoluongHD
             // 
-            this.btnThongkeMax.Location = new System.Drawing.Point(460, 15);
-            this.btnThongkeMax.Name = "btnThongkeMax";
-            this.btnThongkeMax.Size = new System.Drawing.Size(136, 21);
-            this.btnThongkeMax.TabIndex = 6;
-            this.btnThongkeMax.Text = "Thống kê";
-            this.btnThongkeMax.UseVisualStyleBackColor = true;
+            this.rdoSoluongHD.AutoSize = true;
+            this.rdoSoluongHD.Location = new System.Drawing.Point(199, 16);
+            this.rdoSoluongHD.Name = "rdoSoluongHD";
+            this.rdoSoluongHD.Size = new System.Drawing.Size(108, 17);
+            this.rdoSoluongHD.TabIndex = 7;
+            this.rdoSoluongHD.TabStop = true;
+            this.rdoSoluongHD.Text = "số lượng hoá đơn";
+            this.rdoSoluongHD.UseVisualStyleBackColor = true;
+            this.rdoSoluongHD.CheckedChanged += new System.EventHandler(this.rdoSoluongHD_CheckedChanged);
             // 
-            // cboLuachonmax
+            // rdoTongtien
             // 
-            this.cboLuachonmax.FormattingEnabled = true;
-            this.cboLuachonmax.Location = new System.Drawing.Point(352, 16);
-            this.cboLuachonmax.Name = "cboLuachonmax";
-            this.cboLuachonmax.Size = new System.Drawing.Size(70, 21);
-            this.cboLuachonmax.TabIndex = 5;
-            this.cboLuachonmax.DropDown += new System.EventHandler(this.cboLuachonmax_DropDown);
-            // 
-            // rdoNammax
-            // 
-            this.rdoNammax.AutoSize = true;
-            this.rdoNammax.Location = new System.Drawing.Point(271, 19);
-            this.rdoNammax.Name = "rdoNammax";
-            this.rdoNammax.Size = new System.Drawing.Size(47, 17);
-            this.rdoNammax.TabIndex = 4;
-            this.rdoNammax.TabStop = true;
-            this.rdoNammax.Text = "Năm";
-            this.rdoNammax.UseVisualStyleBackColor = true;
-            this.rdoNammax.CheckedChanged += new System.EventHandler(this.rdoNammax_CheckedChanged);
-            // 
-            // rdoQuymax
-            // 
-            this.rdoQuymax.AutoSize = true;
-            this.rdoQuymax.Location = new System.Drawing.Point(197, 19);
-            this.rdoQuymax.Name = "rdoQuymax";
-            this.rdoQuymax.Size = new System.Drawing.Size(44, 17);
-            this.rdoQuymax.TabIndex = 3;
-            this.rdoQuymax.TabStop = true;
-            this.rdoQuymax.Text = "Quý";
-            this.rdoQuymax.UseVisualStyleBackColor = true;
-            this.rdoQuymax.CheckedChanged += new System.EventHandler(this.rdoQuymax_CheckedChanged);
-            // 
-            // rdoThangmax
-            // 
-            this.rdoThangmax.AutoSize = true;
-            this.rdoThangmax.Location = new System.Drawing.Point(122, 18);
-            this.rdoThangmax.Name = "rdoThangmax";
-            this.rdoThangmax.Size = new System.Drawing.Size(56, 17);
-            this.rdoThangmax.TabIndex = 2;
-            this.rdoThangmax.TabStop = true;
-            this.rdoThangmax.Text = "Tháng";
-            this.rdoThangmax.UseVisualStyleBackColor = true;
-            this.rdoThangmax.CheckedChanged += new System.EventHandler(this.rdoThangmax_CheckedChanged);
+            this.rdoTongtien.AutoSize = true;
+            this.rdoTongtien.Location = new System.Drawing.Point(123, 17);
+            this.rdoTongtien.Name = "rdoTongtien";
+            this.rdoTongtien.Size = new System.Drawing.Size(70, 17);
+            this.rdoTongtien.TabIndex = 4;
+            this.rdoTongtien.TabStop = true;
+            this.rdoTongtien.Text = "Tổng tiền";
+            this.rdoTongtien.UseVisualStyleBackColor = true;
+            this.rdoTongtien.CheckedChanged += new System.EventHandler(this.rdoTongtien_CheckedChanged);
             // 
             // textBox2
             // 
@@ -232,11 +220,43 @@
             // 
             // rpvKHmax
             // 
+            reportDataSource2.Name = "DataSetBcaoHDnhanhang";
+            reportDataSource2.Value = this.tblHDnhanhangBindingSource;
+            this.rpvKHmax.LocalReport.DataSources.Add(reportDataSource2);
+            this.rpvKHmax.LocalReport.ReportEmbeddedResource = "CSLT2_Suachuagiaydep.DatasetReport.BcaoHDnhanhangrp.rdlc";
             this.rpvKHmax.Location = new System.Drawing.Point(25, 55);
             this.rpvKHmax.Name = "rpvKHmax";
             this.rpvKHmax.ServerReport.BearerToken = null;
             this.rpvKHmax.Size = new System.Drawing.Size(702, 314);
             this.rpvKHmax.TabIndex = 0;
+            // 
+            // BcaoKHBindingSource
+            // 
+            this.BcaoKHBindingSource.DataMember = "BcaoKH";
+            this.BcaoKHBindingSource.DataSource = this.bcaoKHDataset;
+            // 
+            // bcaoKHTableAdapter
+            // 
+            this.bcaoKHTableAdapter.ClearBeforeFill = true;
+            // 
+            // bcaoKHDatasetBindingSource1
+            // 
+            this.bcaoKHDatasetBindingSource1.DataSource = this.bcaoKHDataset;
+            this.bcaoKHDatasetBindingSource1.Position = 0;
+            // 
+            // bcaoHDnhanhang
+            // 
+            this.bcaoHDnhanhang.DataSetName = "BcaoHDnhanhang";
+            this.bcaoHDnhanhang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblHDnhanhangBindingSource
+            // 
+            this.tblHDnhanhangBindingSource.DataMember = "tblHDnhanhang";
+            this.tblHDnhanhangBindingSource.DataSource = this.bcaoHDnhanhang;
+            // 
+            // tblHDnhanhangTableAdapter
+            // 
+            this.tblHDnhanhangTableAdapter.ClearBeforeFill = true;
             // 
             // frmBcaoKH
             // 
@@ -247,11 +267,18 @@
             this.Name = "frmBcaoKH";
             this.Text = "Báo cáo danh sách khách hàng";
             this.Load += new System.EventHandler(this.frmBcaoKH_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDataset)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BcaoKHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDnhanhang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHDnhanhangBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,16 +291,21 @@
         private System.Windows.Forms.Button btnThongke;
         private System.Windows.Forms.ComboBox cboLuachon;
         private System.Windows.Forms.RadioButton rdoQuy;
-        private System.Windows.Forms.RadioButton rdoNam;
         private System.Windows.Forms.RadioButton rdoThang;
         private System.Windows.Forms.TextBox textBox1;
         private Microsoft.Reporting.WinForms.ReportViewer rpvKH;
-        private System.Windows.Forms.Button btnThongkeMax;
-        private System.Windows.Forms.ComboBox cboLuachonmax;
-        private System.Windows.Forms.RadioButton rdoNammax;
-        private System.Windows.Forms.RadioButton rdoQuymax;
-        private System.Windows.Forms.RadioButton rdoThangmax;
+        private System.Windows.Forms.RadioButton rdoTongtien;
         private System.Windows.Forms.TextBox textBox2;
         private Microsoft.Reporting.WinForms.ReportViewer rpvKHmax;
+        private System.Windows.Forms.BindingSource bcaoKHBindingSource1;
+        private System.Windows.Forms.BindingSource bcaoKHDatasetBindingSource;
+        private DatasetReport.BcaoKHDataset bcaoKHDataset;
+        private System.Windows.Forms.BindingSource BcaoKHBindingSource;
+        private DatasetReport.BcaoKHDatasetTableAdapters.BcaoKHTableAdapter bcaoKHTableAdapter;
+        private System.Windows.Forms.BindingSource bcaoKHDatasetBindingSource1;
+        private System.Windows.Forms.RadioButton rdoSoluongHD;
+        private System.Windows.Forms.BindingSource tblHDnhanhangBindingSource;
+        private DatasetReport.BcaoHDnhanhang bcaoHDnhanhang;
+        private DatasetReport.BcaoHDnhanhangTableAdapters.tblHDnhanhangTableAdapter tblHDnhanhangTableAdapter;
     }
 }

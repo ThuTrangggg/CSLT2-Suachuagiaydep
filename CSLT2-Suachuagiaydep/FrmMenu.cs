@@ -69,5 +69,52 @@ namespace CSLT2_Suachuagiaydep
             FormBaocao.frmBcaoHDnhanhang a = new FormBaocao.frmBcaoHDnhanhang();
             a.Show();
         }
+
+        private void mnuHDnhanhang_Click(object sender, EventArgs e)
+        {
+            frmHDnhan a = new frmHDnhan();
+            a.Show();
+        }
+
+        private void mnuHDduaxuong_Click(object sender, EventArgs e)
+        {
+            frmHDduaxuong a = new frmHDduaxuong();
+            a.Show();
+        }
+
+        private void mnuKhachhang_Click(object sender, EventArgs e)
+        {
+            frmTimkiemKH a = new frmTimkiemKH();
+            a.Show();
+        }
+
+        private void mnuSanpham_Click(object sender, EventArgs e)
+        {
+            frmTimkiemSP a = new frmTimkiemSP();
+            a.Show();
+        }
+
+        private void mnuFindHDnhanhang_Click(object sender, EventArgs e)
+        {
+            frmTimkiemHDnhan a = new frmTimkiemHDnhan();
+            a.Show();
+        }
+
+        private void mnuFindHDduaxuong_Click(object sender, EventArgs e)
+        {
+            frmTimkiemHDdua a = new frmTimkiemHDdua();
+            a.Show();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void mnuBcaoDSKH_Click(object sender, EventArgs e)
+        {
+            FormBaocao.frmBcaoKH a = new FormBaocao.frmBcaoKH();
+            a.Show();
+        }
     }
 }

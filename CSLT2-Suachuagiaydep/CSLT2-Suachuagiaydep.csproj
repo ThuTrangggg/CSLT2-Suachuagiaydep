@@ -274,6 +274,12 @@
     <EmbeddedResource Include="FormHoadon\frmHDnhanhang.resx">
       <DependentUpon>frmHDnhanhang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTimkiem\frmTimkiemHDdua.resx">
+      <DependentUpon>frmTimkiemHDdua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimkiem\frmTimkiemSP.resx">
+      <DependentUpon>frmTimkiemSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>

@@ -175,7 +175,7 @@ namespace CSLT2_Suachuagiaydep
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            this.Close(); 
         }
 
         private void dataGridViewKH_Click_1(object sender, EventArgs e)

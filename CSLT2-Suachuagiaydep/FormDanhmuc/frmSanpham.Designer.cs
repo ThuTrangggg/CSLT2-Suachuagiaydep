@@ -67,6 +67,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(51, 148);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -93,11 +94,11 @@
             // 
             // picAnh
             // 
-            this.picAnh.BackColor = System.Drawing.Color.Wheat;
+            this.picAnh.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.picAnh.Location = new System.Drawing.Point(638, 41);
             this.picAnh.Margin = new System.Windows.Forms.Padding(2);
             this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(139, 124);
+            this.picAnh.Size = new System.Drawing.Size(124, 124);
             this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAnh.TabIndex = 31;
             this.picAnh.TabStop = false;
@@ -113,6 +114,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(357, 148);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -282,6 +284,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(350, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -293,6 +296,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(350, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -304,6 +308,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(49, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -315,6 +320,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(51, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -326,9 +332,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(234, 12);
+            this.label1.Location = new System.Drawing.Point(270, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 28);

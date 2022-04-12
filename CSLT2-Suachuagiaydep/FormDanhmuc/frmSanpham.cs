@@ -69,7 +69,7 @@ namespace CSLT2_Suachuagiaydep
             btnXoa.Enabled = true;
             btnBoqua.Enabled = true;
             txtAnh.Text = Functions.GetFieldValues("SELECT Anh FROM tblSanpham WHERE MaSP = N'" + txtMaSP.Text + "'");
-            btnOpen.Image = Image.FromFile(txtAnh.Text);
+            //btnOpen.Image = Image.FromFile(txtAnh.Text);
             picAnh.Image = Image.FromFile(txtAnh.Text);
             txtGhichu.Text = Functions.GetFieldValues("SELECT Ghichu FROM tblSanpham WHERE MaSP = N'" + txtMaSP.Text + "'");
 
@@ -224,7 +224,7 @@ namespace CSLT2_Suachuagiaydep
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnOpen_Click(object sender, EventArgs e)

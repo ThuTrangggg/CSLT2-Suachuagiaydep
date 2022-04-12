@@ -85,7 +85,7 @@
             // 
             // picAnh
             // 
-            this.picAnh.BackColor = System.Drawing.SystemColors.Info;
+            this.picAnh.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.picAnh.Location = new System.Drawing.Point(25, 50);
             this.picAnh.Margin = new System.Windows.Forms.Padding(2);
             this.picAnh.Name = "picAnh";
@@ -96,6 +96,7 @@
             // 
             // DataGridViewNV
             // 
+            this.DataGridViewNV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.DataGridViewNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewNV.Location = new System.Drawing.Point(48, 312);
             this.DataGridViewNV.Margin = new System.Windows.Forms.Padding(2);
@@ -116,7 +117,7 @@
             // 
             // txtCongviec
             // 
-            this.txtCongviec.Location = new System.Drawing.Point(593, 105);
+            this.txtCongviec.Location = new System.Drawing.Point(593, 100);
             this.txtCongviec.Margin = new System.Windows.Forms.Padding(2);
             this.txtCongviec.Name = "txtCongviec";
             this.txtCongviec.Size = new System.Drawing.Size(166, 20);
@@ -127,7 +128,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(670, 76);
+            this.label6.Location = new System.Drawing.Point(667, 71);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 17);
@@ -163,7 +164,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(513, 105);
+            this.label8.Location = new System.Drawing.Point(513, 100);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 17);
@@ -185,7 +186,7 @@
             // 
             // mskNamsinh
             // 
-            this.mskNamsinh.Location = new System.Drawing.Point(748, 73);
+            this.mskNamsinh.Location = new System.Drawing.Point(745, 68);
             this.mskNamsinh.Margin = new System.Windows.Forms.Padding(2);
             this.mskNamsinh.Mask = "00/00/0000";
             this.mskNamsinh.Name = "mskNamsinh";

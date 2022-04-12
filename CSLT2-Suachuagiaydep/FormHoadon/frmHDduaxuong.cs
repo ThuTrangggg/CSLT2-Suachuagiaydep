@@ -21,5 +21,15 @@ namespace CSLT2_Suachuagiaydep
         {
 
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtYeucaulam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

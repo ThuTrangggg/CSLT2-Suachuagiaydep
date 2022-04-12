@@ -62,7 +62,7 @@
             // 
             // tb_nam
             // 
-            this.tb_nam.Location = new System.Drawing.Point(283, 111);
+            this.tb_nam.Location = new System.Drawing.Point(279, 97);
             this.tb_nam.Margin = new System.Windows.Forms.Padding(2);
             this.tb_nam.Name = "tb_nam";
             this.tb_nam.Size = new System.Drawing.Size(130, 20);
@@ -70,7 +70,7 @@
             // 
             // tb_masp
             // 
-            this.tb_masp.Location = new System.Drawing.Point(283, 146);
+            this.tb_masp.Location = new System.Drawing.Point(279, 132);
             this.tb_masp.Margin = new System.Windows.Forms.Padding(2);
             this.tb_masp.Name = "tb_masp";
             this.tb_masp.Size = new System.Drawing.Size(130, 20);
@@ -81,7 +81,7 @@
             this.lb_nam.AutoSize = true;
             this.lb_nam.BackColor = System.Drawing.Color.Transparent;
             this.lb_nam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nam.Location = new System.Drawing.Point(118, 229);
+            this.lb_nam.Location = new System.Drawing.Point(114, 215);
             this.lb_nam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_nam.Name = "lb_nam";
             this.lb_nam.Size = new System.Drawing.Size(41, 19);
@@ -93,7 +93,7 @@
             this.lb_masp.AutoSize = true;
             this.lb_masp.BackColor = System.Drawing.Color.Transparent;
             this.lb_masp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_masp.Location = new System.Drawing.Point(112, 104);
+            this.lb_masp.Location = new System.Drawing.Point(108, 90);
             this.lb_masp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_masp.Name = "lb_masp";
             this.lb_masp.Size = new System.Drawing.Size(55, 19);
@@ -120,17 +120,17 @@
             // dtgw_HDD
             // 
             this.dtgw_HDD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgw_HDD.Location = new System.Drawing.Point(140, 274);
+            this.dtgw_HDD.Location = new System.Drawing.Point(122, 256);
             this.dtgw_HDD.Margin = new System.Windows.Forms.Padding(2);
             this.dtgw_HDD.Name = "dtgw_HDD";
             this.dtgw_HDD.RowHeadersWidth = 51;
             this.dtgw_HDD.RowTemplate.Height = 24;
-            this.dtgw_HDD.Size = new System.Drawing.Size(533, 232);
+            this.dtgw_HDD.Size = new System.Drawing.Size(551, 183);
             this.dtgw_HDD.TabIndex = 19;
             // 
             // tb_ngay
             // 
-            this.tb_ngay.Location = new System.Drawing.Point(283, 188);
+            this.tb_ngay.Location = new System.Drawing.Point(279, 174);
             this.tb_ngay.Margin = new System.Windows.Forms.Padding(2);
             this.tb_ngay.Name = "tb_ngay";
             this.tb_ngay.Size = new System.Drawing.Size(130, 20);
@@ -138,7 +138,7 @@
             // 
             // tb_thang
             // 
-            this.tb_thang.Location = new System.Drawing.Point(283, 232);
+            this.tb_thang.Location = new System.Drawing.Point(279, 218);
             this.tb_thang.Margin = new System.Windows.Forms.Padding(2);
             this.tb_thang.Name = "tb_thang";
             this.tb_thang.Size = new System.Drawing.Size(130, 20);
@@ -146,7 +146,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 73);
+            this.textBox1.Location = new System.Drawing.Point(279, 59);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(130, 20);
@@ -157,7 +157,7 @@
             this.lb_thang.AutoSize = true;
             this.lb_thang.BackColor = System.Drawing.Color.Transparent;
             this.lb_thang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_thang.Location = new System.Drawing.Point(118, 188);
+            this.lb_thang.Location = new System.Drawing.Point(114, 174);
             this.lb_thang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_thang.Name = "lb_thang";
             this.lb_thang.Size = new System.Drawing.Size(51, 19);
@@ -169,7 +169,7 @@
             this.lb_ngay.AutoSize = true;
             this.lb_ngay.BackColor = System.Drawing.Color.Transparent;
             this.lb_ngay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ngay.Location = new System.Drawing.Point(118, 146);
+            this.lb_ngay.Location = new System.Drawing.Point(114, 132);
             this.lb_ngay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_ngay.Name = "lb_ngay";
             this.lb_ngay.Size = new System.Drawing.Size(49, 19);
@@ -181,7 +181,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 68);
+            this.label1.Location = new System.Drawing.Point(84, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 19);

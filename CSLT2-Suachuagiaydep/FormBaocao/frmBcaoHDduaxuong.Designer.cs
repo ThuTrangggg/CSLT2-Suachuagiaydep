@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tblHDduaxuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baocaoHDduaxuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baocaoHDduaxuong = new CSLT2_Suachuagiaydep.DatasetReport.BaocaoHDduaxuong();
@@ -40,11 +41,20 @@
             this.dtpNgaydua = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tblHDduaxuongTableAdapter = new CSLT2_Suachuagiaydep.DatasetReport.BaocaoHDduaxuongTableAdapters.tblHDduaxuongTableAdapter();
+            this.rpvHDmaxtongtien = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.bcaoHDmaxtongtien = new CSLT2_Suachuagiaydep.DatasetReport.BcaoHDmaxtongtien();
+            this.bcaoHDmaxtongtienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bcaoHDmaxtongtienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bcaoHDmaxtongtienTableAdapter = new CSLT2_Suachuagiaydep.DatasetReport.BcaoHDmaxtongtienTableAdapters.BcaoHDmaxtongtienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tblHDduaxuongBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baocaoHDduaxuongBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baocaoHDduaxuong)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDmaxtongtien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDmaxtongtienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDmaxtongtienBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tblHDduaxuongBindingSource
@@ -87,9 +97,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "BaocaoHDduaxuongDataSet";
-            reportDataSource1.Value = this.tblHDduaxuongBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource3.Name = "BaocaoHDduaxuongDataSet";
+            reportDataSource3.Value = this.tblHDduaxuongBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CSLT2_Suachuagiaydep.DatasetReport.BaocaoHDduaxuong.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(24, 56);
             this.reportViewer1.Name = "reportViewer1";
@@ -120,6 +130,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.rpvHDmaxtongtien);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -127,10 +138,42 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thống kế hoá đơn tổng tiền nhiều nhất";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // tblHDduaxuongTableAdapter
             // 
             this.tblHDduaxuongTableAdapter.ClearBeforeFill = true;
+            // 
+            // rpvHDmaxtongtien
+            // 
+            reportDataSource2.Name = "BcaoHDmaxtongtien";
+            reportDataSource2.Value = this.bcaoHDmaxtongtienBindingSource1;
+            this.rpvHDmaxtongtien.LocalReport.DataSources.Add(reportDataSource2);
+            this.rpvHDmaxtongtien.LocalReport.ReportEmbeddedResource = "CSLT2_Suachuagiaydep.DatasetReport.BcaoHDmaxtongtien.rdlc";
+            this.rpvHDmaxtongtien.Location = new System.Drawing.Point(16, 40);
+            this.rpvHDmaxtongtien.Name = "rpvHDmaxtongtien";
+            this.rpvHDmaxtongtien.ServerReport.BearerToken = null;
+            this.rpvHDmaxtongtien.Size = new System.Drawing.Size(734, 280);
+            this.rpvHDmaxtongtien.TabIndex = 0;
+            // 
+            // bcaoHDmaxtongtien
+            // 
+            this.bcaoHDmaxtongtien.DataSetName = "BcaoHDmaxtongtien";
+            this.bcaoHDmaxtongtien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bcaoHDmaxtongtienBindingSource
+            // 
+            this.bcaoHDmaxtongtienBindingSource.DataSource = this.bcaoHDmaxtongtien;
+            this.bcaoHDmaxtongtienBindingSource.Position = 0;
+            // 
+            // bcaoHDmaxtongtienBindingSource1
+            // 
+            this.bcaoHDmaxtongtienBindingSource1.DataMember = "BcaoHDmaxtongtien";
+            this.bcaoHDmaxtongtienBindingSource1.DataSource = this.bcaoHDmaxtongtienBindingSource;
+            // 
+            // bcaoHDmaxtongtienTableAdapter
+            // 
+            this.bcaoHDmaxtongtienTableAdapter.ClearBeforeFill = true;
             // 
             // frmBcaoHDduaxuong
             // 
@@ -146,6 +189,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.baocaoHDduaxuong)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDmaxtongtien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDmaxtongtienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDmaxtongtienBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,5 +209,10 @@
         private System.Windows.Forms.BindingSource baocaoHDduaxuongBindingSource;
         private System.Windows.Forms.BindingSource tblHDduaxuongBindingSource;
         private DatasetReport.BaocaoHDduaxuongTableAdapters.tblHDduaxuongTableAdapter tblHDduaxuongTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvHDmaxtongtien;
+        private System.Windows.Forms.BindingSource bcaoHDmaxtongtienBindingSource;
+        private DatasetReport.BcaoHDmaxtongtien bcaoHDmaxtongtien;
+        private System.Windows.Forms.BindingSource bcaoHDmaxtongtienBindingSource1;
+        private DatasetReport.BcaoHDmaxtongtienTableAdapters.BcaoHDmaxtongtienTableAdapter bcaoHDmaxtongtienTableAdapter;
     }
 }

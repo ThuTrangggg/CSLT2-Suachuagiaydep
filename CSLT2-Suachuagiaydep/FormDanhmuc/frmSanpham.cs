@@ -22,6 +22,8 @@ namespace CSLT2_Suachuagiaydep
             txtMaSP.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
+            txtSoluong.Enabled = false;
+            txtDongia.Enabled = false;
             Load_DataGridView();
         }
         private void ResetValues()
@@ -31,6 +33,9 @@ namespace CSLT2_Suachuagiaydep
             txtSoluong.Text = "0";
             txtDongia.Text = "0";
             txtAnh.Text = "";
+            txtSize.Text = "";
+            txtmau.Text = "";
+            picAnh.Image = null;
             btnOpen.Image = null;
             txtSoluong.Enabled = false;
             txtDongia.Enabled = false;
@@ -41,9 +46,15 @@ namespace CSLT2_Suachuagiaydep
         private void Load_DataGridView()
         {
             string sql;
-            sql = "SELECT MaSP, TenSP, Soluong, Dongia FROM tblSanpham";
+            sql = "SELECT MaSP, TenSP, Soluong, Dongia, mau, size FROM tblSanpham";
             tblSanpham = Functions.GetDataToTable(sql);
             DataGridViewSP.DataSource = tblSanpham;
+            DataGridViewSP.Columns[0].HeaderText = "Mã sản phẩm";
+            DataGridViewSP.Columns[1].HeaderText = "Tên sản phẩm";
+            DataGridViewSP.Columns[2].HeaderText = "Số lượng";
+            DataGridViewSP.Columns[3].HeaderText = "Đơn giá";
+            DataGridViewSP.Columns[4].HeaderText = "Màu";
+            DataGridViewSP.Columns[5].HeaderText = "Size";
 
         }
 
@@ -65,6 +76,9 @@ namespace CSLT2_Suachuagiaydep
             txtTenSP.Text = DataGridViewSP.CurrentRow.Cells["TenSP"].Value.ToString();
             txtSoluong.Text = DataGridViewSP.CurrentRow.Cells["Soluong"].Value.ToString();
             txtDongia.Text = DataGridViewSP.CurrentRow.Cells["Dongia"].Value.ToString();
+            txtmau.Text = DataGridViewSP.CurrentRow.Cells["mau"].Value.ToString();
+            txtSize.Text = DataGridViewSP.CurrentRow.Cells["size"].Value.ToString();
+
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnBoqua.Enabled = true;
@@ -116,7 +130,7 @@ namespace CSLT2_Suachuagiaydep
             }
 
             sql = "UPDATE tblSanpham SET  TenSP=N'" + txtTenSP.Text.Trim().ToString() + "',Anh=N'" + txtAnh.Text +
-                "',Ghichu=N'" + txtGhichu.Text + "' WHERE MaSP=N'" + txtMaSP.Text + "'";
+                "',Ghichu=N'" + txtGhichu.Text + "',size=N'"+txtSize.Text+"',mau=N'"+txtmau.Text+"' WHERE MaSP=N'" + txtMaSP.Text + "'";
             Functions.runsql(sql);
             Load_DataGridView();
             ResetValues();

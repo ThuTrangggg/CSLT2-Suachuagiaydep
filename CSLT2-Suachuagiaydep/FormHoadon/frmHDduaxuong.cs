@@ -16,5 +16,10 @@ namespace CSLT2_Suachuagiaydep
         {
             InitializeComponent();
         }
+
+        private void frmHDduaxuong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

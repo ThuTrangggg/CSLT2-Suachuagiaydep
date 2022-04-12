@@ -16,5 +16,25 @@ namespace CSLT2_Suachuagiaydep
         {
             InitializeComponent();
         }
+
+        private void txtDiachi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenkhach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

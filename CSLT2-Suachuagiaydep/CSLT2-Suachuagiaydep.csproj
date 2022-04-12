@@ -79,6 +79,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatasetReport\BcaoHDmaxtongtien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BcaoHDmaxtongtien.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatasetReport\BcaoKHDataset.cs">
       <DependentUpon>BcaoKHDataset.xsd</DependentUpon>
     </Compile>
@@ -158,18 +163,6 @@
     <Compile Include="FormHoadon\frmHDnhanhang.Designer.cs">
       <DependentUpon>frmHDnhanhang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHoadon\frmChitietHDduaxuong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHoadon\frmChitietHDduaxuong.Designer.cs">
-      <DependentUpon>frmChitietHDduaxuong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHoadon\frmChitietHDnhanhang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHoadon\frmChitietHDnhanhang.Designer.cs">
-      <DependentUpon>frmChitietHDnhanhang.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +219,9 @@
       <DependentUpon>KHmaxtongtien.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DatasetReport\BcaoHDmaxtongtien.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatasetReport\BcaoHDnhanhangrp.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -271,6 +267,9 @@
     <EmbeddedResource Include="FormDanhmuc\frmXuong.resx">
       <DependentUpon>frmXuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHoadon\frmHDduaxuong.resx">
+      <DependentUpon>frmHDduaxuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHoadon\frmHDnhanhang.resx">
       <DependentUpon>frmHDnhanhang.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +298,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DatasetReport\BcaoHDmaxtongtien.xsc">
+      <DependentUpon>BcaoHDmaxtongtien.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetReport\BcaoHDmaxtongtien.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BcaoHDmaxtongtien.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatasetReport\BcaoHDmaxtongtien.xss">
+      <DependentUpon>BcaoHDmaxtongtien.xsd</DependentUpon>
+    </None>
     <None Include="DatasetReport\BcaoKHDataset.xsc">
       <DependentUpon>BcaoKHDataset.xsd</DependentUpon>
     </None>

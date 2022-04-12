@@ -52,13 +52,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtmau = new System.Windows.Forms.TextBox();
+            this.Màu = new System.Windows.Forms.Label();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSP)).BeginInit();
             this.SuspendLayout();
             // 
             // txtGhichu
             // 
-            this.txtGhichu.Location = new System.Drawing.Point(164, 148);
+            this.txtGhichu.Location = new System.Drawing.Point(164, 178);
             this.txtGhichu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 3);
             this.txtGhichu.Name = "txtGhichu";
             this.txtGhichu.Size = new System.Drawing.Size(114, 20);
@@ -69,7 +73,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(51, 148);
+            this.label7.Location = new System.Drawing.Point(51, 178);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 17);
@@ -105,7 +109,7 @@
             // 
             // txtAnh
             // 
-            this.txtAnh.Location = new System.Drawing.Point(436, 148);
+            this.txtAnh.Location = new System.Drawing.Point(436, 178);
             this.txtAnh.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnh.Name = "txtAnh";
             this.txtAnh.Size = new System.Drawing.Size(160, 20);
@@ -116,7 +120,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(357, 148);
+            this.label6.Location = new System.Drawing.Point(357, 178);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 17);
@@ -332,7 +336,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
             this.label1.Location = new System.Drawing.Point(270, 9);
@@ -342,6 +346,46 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "DANH MỤC SẢN PHẨM";
             // 
+            // txtmau
+            // 
+            this.txtmau.Location = new System.Drawing.Point(436, 148);
+            this.txtmau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 3);
+            this.txtmau.Name = "txtmau";
+            this.txtmau.Size = new System.Drawing.Size(114, 20);
+            this.txtmau.TabIndex = 36;
+            // 
+            // Màu
+            // 
+            this.Màu.AutoSize = true;
+            this.Màu.BackColor = System.Drawing.Color.Transparent;
+            this.Màu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Màu.Location = new System.Drawing.Point(357, 148);
+            this.Màu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Màu.Name = "Màu";
+            this.Màu.Size = new System.Drawing.Size(35, 17);
+            this.Màu.TabIndex = 35;
+            this.Màu.Text = "Màu";
+            // 
+            // txtSize
+            // 
+            this.txtSize.Location = new System.Drawing.Point(164, 148);
+            this.txtSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 3);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(114, 20);
+            this.txtSize.TabIndex = 38;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(51, 148);
+            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(33, 17);
+            this.label.TabIndex = 37;
+            this.label.Text = "Size";
+            // 
             // frmSanpham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +393,10 @@
             this.BackgroundImage = global::CSLT2_Suachuagiaydep.Properties.Resources.anh1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(813, 461);
+            this.Controls.Add(this.txtSize);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.txtmau);
+            this.Controls.Add(this.Màu);
             this.Controls.Add(this.txtGhichu);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnOpen);
@@ -407,5 +455,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtmau;
+        private System.Windows.Forms.Label Màu;
+        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.Label label;
     }
 }

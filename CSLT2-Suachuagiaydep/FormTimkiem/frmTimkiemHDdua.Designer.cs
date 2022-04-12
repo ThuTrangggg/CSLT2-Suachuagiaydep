@@ -42,6 +42,8 @@
             this.lb_thang = new System.Windows.Forms.Label();
             this.lb_ngay = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDong = new System.Windows.Forms.Button();
+            this.btnTimlai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgw_HDD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,16 +103,17 @@
             // bt_timkiem
             // 
             this.bt_timkiem.BackColor = System.Drawing.Color.MistyRose;
-            this.bt_timkiem.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_timkiem.Font = new System.Drawing.Font("Times New Roman", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_timkiem.ForeColor = System.Drawing.Color.Black;
             this.bt_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("bt_timkiem.Image")));
             this.bt_timkiem.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bt_timkiem.Location = new System.Drawing.Point(598, 205);
+            this.bt_timkiem.Location = new System.Drawing.Point(569, 73);
             this.bt_timkiem.Margin = new System.Windows.Forms.Padding(2);
             this.bt_timkiem.Name = "bt_timkiem";
-            this.bt_timkiem.Size = new System.Drawing.Size(104, 64);
+            this.bt_timkiem.Size = new System.Drawing.Size(104, 44);
             this.bt_timkiem.TabIndex = 20;
             this.bt_timkiem.Text = "Tìm kiếm";
+            this.bt_timkiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_timkiem.UseVisualStyleBackColor = false;
             this.bt_timkiem.Click += new System.EventHandler(this.bt_timkiem_Click);
             // 
@@ -185,6 +188,36 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Mã hóa đơn đưa xưởng";
             // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.Color.MistyRose;
+            this.btnDong.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDong.Location = new System.Drawing.Point(568, 194);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(105, 40);
+            this.btnDong.TabIndex = 27;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDong.UseVisualStyleBackColor = false;
+            // 
+            // btnTimlai
+            // 
+            this.btnTimlai.BackColor = System.Drawing.Color.MistyRose;
+            this.btnTimlai.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimlai.Image = ((System.Drawing.Image)(resources.GetObject("btnTimlai.Image")));
+            this.btnTimlai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimlai.Location = new System.Drawing.Point(568, 135);
+            this.btnTimlai.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimlai.Name = "btnTimlai";
+            this.btnTimlai.Size = new System.Drawing.Size(105, 40);
+            this.btnTimlai.TabIndex = 26;
+            this.btnTimlai.Text = "Tìm lại";
+            this.btnTimlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimlai.UseVisualStyleBackColor = false;
+            // 
             // frmTimkiemHDdua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +225,8 @@
             this.BackgroundImage = global::CSLT2_Suachuagiaydep.Properties.Resources.anh1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDong);
+            this.Controls.Add(this.btnTimlai);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_nam);
             this.Controls.Add(this.tb_masp);
@@ -229,5 +264,7 @@
         private System.Windows.Forms.Label lb_thang;
         private System.Windows.Forms.Label lb_ngay;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDong;
+        private System.Windows.Forms.Button btnTimlai;
     }
 }

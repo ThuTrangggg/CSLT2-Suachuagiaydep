@@ -40,6 +40,8 @@
             this.tb_mau = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnTimlai = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgw_sp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,15 +61,16 @@
             // bt_tim
             // 
             this.bt_tim.BackColor = System.Drawing.Color.MistyRose;
-            this.bt_tim.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_tim.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tim.Image = ((System.Drawing.Image)(resources.GetObject("bt_tim.Image")));
             this.bt_tim.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bt_tim.Location = new System.Drawing.Point(547, 123);
+            this.bt_tim.Location = new System.Drawing.Point(536, 69);
             this.bt_tim.Margin = new System.Windows.Forms.Padding(2);
             this.bt_tim.Name = "bt_tim";
-            this.bt_tim.Size = new System.Drawing.Size(107, 55);
+            this.bt_tim.Size = new System.Drawing.Size(105, 40);
             this.bt_tim.TabIndex = 16;
             this.bt_tim.Text = "Tìm kiếm";
+            this.bt_tim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_tim.UseVisualStyleBackColor = false;
             this.bt_tim.Click += new System.EventHandler(this.bt_tim_Click);
             // 
@@ -158,6 +161,36 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Màu";
             // 
+            // btnTimlai
+            // 
+            this.btnTimlai.BackColor = System.Drawing.Color.MistyRose;
+            this.btnTimlai.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimlai.Image = ((System.Drawing.Image)(resources.GetObject("btnTimlai.Image")));
+            this.btnTimlai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimlai.Location = new System.Drawing.Point(536, 128);
+            this.btnTimlai.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimlai.Name = "btnTimlai";
+            this.btnTimlai.Size = new System.Drawing.Size(105, 40);
+            this.btnTimlai.TabIndex = 22;
+            this.btnTimlai.Text = "Tìm lại";
+            this.btnTimlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimlai.UseVisualStyleBackColor = false;
+            // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.Color.MistyRose;
+            this.btnDong.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDong.Location = new System.Drawing.Point(536, 187);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(105, 40);
+            this.btnDong.TabIndex = 23;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDong.UseVisualStyleBackColor = false;
+            // 
             // frmTimkiemSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,6 +199,8 @@
             this.BackgroundImage = global::CSLT2_Suachuagiaydep.Properties.Resources.anh1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDong);
+            this.Controls.Add(this.btnTimlai);
             this.Controls.Add(this.tb_size);
             this.Controls.Add(this.tb_mau);
             this.Controls.Add(this.label2);
@@ -199,5 +234,7 @@
         private System.Windows.Forms.TextBox tb_mau;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnTimlai;
+        private System.Windows.Forms.Button btnDong;
     }
 }

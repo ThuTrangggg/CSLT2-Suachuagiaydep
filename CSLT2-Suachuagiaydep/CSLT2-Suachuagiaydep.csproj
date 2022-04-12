@@ -277,6 +277,12 @@
     <EmbeddedResource Include="FormTimkiem\frmTimkiemHDdua.resx">
       <DependentUpon>frmTimkiemHDdua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTimkiem\frmTimkiemHDnhan.resx">
+      <DependentUpon>frmTimkiemHDnhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimkiem\frmTimkiemKH.resx">
+      <DependentUpon>frmTimkiemKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTimkiem\frmTimkiemSP.resx">
       <DependentUpon>frmTimkiemSP.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +400,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyGiayDep.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\PNG-24\Search.png" />
     <None Include="Resources\anh2.jpg" />
     <None Include="Resources\anh1.jpg" />
     <None Include="Resources\Save.ico" />

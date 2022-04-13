@@ -44,7 +44,7 @@ namespace CSLT2_Suachuagiaydep
             cboManhanvien.SelectedIndex = -1;
             Functions.fillcombo("SELECT MaSP FROM tblSanpham", cboMaSP,"MaSP","tensp");
             cboMaSP.SelectedIndex = -1;
-            Functions.fillcombo("SELECT Maxuong FROM tblXuong", cboMaxuong,"Maxuong","tenxuong");
+            Functions.fillcombo("SELECT Maxuong FROM tblXuong", cboMaxuong,"Maxuong","maxuong");
             cboMaxuong.SelectedIndex = -1;
 
             Functions.fillcombo("SELECT mahddua FROM tblChitietHDduaxuong", cboMaHDdua,

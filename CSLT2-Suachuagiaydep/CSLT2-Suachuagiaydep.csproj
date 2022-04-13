@@ -438,6 +438,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyGiayDep.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\pic2.jpg" />
+    <None Include="Resources\giay1.jpeg" />
+    <None Include="Resources\downw.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\Flannel_1920x1050_desktop.jpeg" />
     <None Include="Resources\PNG-24\Save.png" />
     <None Include="Resources\PNG-24\Delete.png" />
     <None Include="Resources\PNG-24\Add.png" />

@@ -142,6 +142,32 @@ namespace CSLT2_Suachuagiaydep
             key = key + t;
             return key;
         }
+        public static string CreateKeySP(string str)
+        {
+            int so = 0;
+            if (int.TryParse(str, out so))
+            {
+                return (so + 1).ToString();
+            }
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                if (!int.TryParse("1" + str.Substring(i), out so))
+                {
+                    int.TryParse("1" + str.Substring(i + 1), out so);
+
+                    break;
+                }
+            }
+            if (so != 1 && str.IndexOf(so.ToString().Substring(1)) != -1)
+            {
+                int somoi = so + 1;
+                return str.Replace(so.ToString().Substring(1), somoi.ToString().Substring(1));
+            }
+            else
+            {
+                return str + "1";
+            }
+        }
         public static string ConvertTimeTo24(string hour)
         {
             string h = "";

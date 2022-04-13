@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimkiemHDnhan));
             this.label1 = new System.Windows.Forms.Label();
-            this.tb_nam = new System.Windows.Forms.TextBox();
+            this.txtThang = new System.Windows.Forms.TextBox();
             this.lb_nam = new System.Windows.Forms.Label();
-            this.tb_thang = new System.Windows.Forms.TextBox();
+            this.txtNgaynhan = new System.Windows.Forms.TextBox();
             this.lb_thang = new System.Windows.Forms.Label();
             this.bt_tim = new System.Windows.Forms.Button();
             this.dtgv_HD = new System.Windows.Forms.DataGridView();
-            this.tb_ngay = new System.Windows.Forms.TextBox();
-            this.tb_tenkhach = new System.Windows.Forms.TextBox();
-            this.tb_maHD = new System.Windows.Forms.TextBox();
+            this.txtNam = new System.Windows.Forms.TextBox();
+            this.txtTenkhach = new System.Windows.Forms.TextBox();
+            this.txtMaHDN = new System.Windows.Forms.TextBox();
             this.lb_tenkhach = new System.Windows.Forms.Label();
             this.lb_ngay = new System.Windows.Forms.Label();
             this.lb_MHD = new System.Windows.Forms.Label();
@@ -60,13 +60,13 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "TÌM KIẾM HÓA ĐƠN NHẬN";
             // 
-            // tb_nam
+            // txtThang
             // 
-            this.tb_nam.Location = new System.Drawing.Point(603, 114);
-            this.tb_nam.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_nam.Name = "tb_nam";
-            this.tb_nam.Size = new System.Drawing.Size(95, 20);
-            this.tb_nam.TabIndex = 25;
+            this.txtThang.Location = new System.Drawing.Point(603, 114);
+            this.txtThang.Margin = new System.Windows.Forms.Padding(2);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.Size = new System.Drawing.Size(95, 20);
+            this.txtThang.TabIndex = 25;
             // 
             // lb_nam
             // 
@@ -79,13 +79,13 @@
             this.lb_nam.TabIndex = 24;
             this.lb_nam.Text = "Năm";
             // 
-            // tb_thang
+            // txtNgaynhan
             // 
-            this.tb_thang.Location = new System.Drawing.Point(603, 77);
-            this.tb_thang.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_thang.Name = "tb_thang";
-            this.tb_thang.Size = new System.Drawing.Size(146, 20);
-            this.tb_thang.TabIndex = 23;
+            this.txtNgaynhan.Location = new System.Drawing.Point(603, 77);
+            this.txtNgaynhan.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNgaynhan.Name = "txtNgaynhan";
+            this.txtNgaynhan.Size = new System.Drawing.Size(146, 20);
+            this.txtNgaynhan.TabIndex = 23;
             // 
             // lb_thang
             // 
@@ -127,29 +127,29 @@
             this.dtgv_HD.TabIndex = 20;
             this.dtgv_HD.DoubleClick += new System.EventHandler(this.dtgv_HD_DoubleClick);
             // 
-            // tb_ngay
+            // txtNam
             // 
-            this.tb_ngay.Location = new System.Drawing.Point(603, 149);
-            this.tb_ngay.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_ngay.Name = "tb_ngay";
-            this.tb_ngay.Size = new System.Drawing.Size(146, 20);
-            this.tb_ngay.TabIndex = 19;
+            this.txtNam.Location = new System.Drawing.Point(603, 149);
+            this.txtNam.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(146, 20);
+            this.txtNam.TabIndex = 19;
             // 
-            // tb_tenkhach
+            // txtTenkhach
             // 
-            this.tb_tenkhach.Location = new System.Drawing.Point(204, 113);
-            this.tb_tenkhach.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_tenkhach.Name = "tb_tenkhach";
-            this.tb_tenkhach.Size = new System.Drawing.Size(179, 20);
-            this.tb_tenkhach.TabIndex = 18;
+            this.txtTenkhach.Location = new System.Drawing.Point(204, 113);
+            this.txtTenkhach.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenkhach.Name = "txtTenkhach";
+            this.txtTenkhach.Size = new System.Drawing.Size(179, 20);
+            this.txtTenkhach.TabIndex = 18;
             // 
-            // tb_maHD
+            // txtMaHDN
             // 
-            this.tb_maHD.Location = new System.Drawing.Point(204, 77);
-            this.tb_maHD.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_maHD.Name = "tb_maHD";
-            this.tb_maHD.Size = new System.Drawing.Size(110, 20);
-            this.tb_maHD.TabIndex = 17;
+            this.txtMaHDN.Location = new System.Drawing.Point(204, 77);
+            this.txtMaHDN.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaHDN.Name = "txtMaHDN";
+            this.txtMaHDN.Size = new System.Drawing.Size(110, 20);
+            this.txtMaHDN.TabIndex = 17;
             // 
             // lb_tenkhach
             // 
@@ -227,15 +227,15 @@
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnTimlai);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_nam);
+            this.Controls.Add(this.txtThang);
             this.Controls.Add(this.lb_nam);
-            this.Controls.Add(this.tb_thang);
+            this.Controls.Add(this.txtNgaynhan);
             this.Controls.Add(this.lb_thang);
             this.Controls.Add(this.bt_tim);
             this.Controls.Add(this.dtgv_HD);
-            this.Controls.Add(this.tb_ngay);
-            this.Controls.Add(this.tb_tenkhach);
-            this.Controls.Add(this.tb_maHD);
+            this.Controls.Add(this.txtNam);
+            this.Controls.Add(this.txtTenkhach);
+            this.Controls.Add(this.txtMaHDN);
             this.Controls.Add(this.lb_tenkhach);
             this.Controls.Add(this.lb_ngay);
             this.Controls.Add(this.lb_MHD);
@@ -251,15 +251,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_nam;
+        private System.Windows.Forms.TextBox txtThang;
         private System.Windows.Forms.Label lb_nam;
-        private System.Windows.Forms.TextBox tb_thang;
+        private System.Windows.Forms.TextBox txtNgaynhan;
         private System.Windows.Forms.Label lb_thang;
         private System.Windows.Forms.Button bt_tim;
         private System.Windows.Forms.DataGridView dtgv_HD;
-        private System.Windows.Forms.TextBox tb_ngay;
-        private System.Windows.Forms.TextBox tb_tenkhach;
-        private System.Windows.Forms.TextBox tb_maHD;
+        private System.Windows.Forms.TextBox txtNam;
+        private System.Windows.Forms.TextBox txtTenkhach;
+        private System.Windows.Forms.TextBox txtMaHDN;
         private System.Windows.Forms.Label lb_tenkhach;
         private System.Windows.Forms.Label lb_ngay;
         private System.Windows.Forms.Label lb_MHD;

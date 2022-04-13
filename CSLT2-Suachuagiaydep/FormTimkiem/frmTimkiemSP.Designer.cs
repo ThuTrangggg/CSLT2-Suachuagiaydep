@@ -33,11 +33,11 @@
             this.bt_tim = new System.Windows.Forms.Button();
             this.dtgw_sp = new System.Windows.Forms.DataGridView();
             this.txtMasp = new System.Windows.Forms.TextBox();
-            this.tb_tensp = new System.Windows.Forms.TextBox();
+            this.txtTensp = new System.Windows.Forms.TextBox();
             this.lb_tenkhach = new System.Windows.Forms.Label();
             this.lb_ténp = new System.Windows.Forms.Label();
-            this.tb_size = new System.Windows.Forms.TextBox();
-            this.tb_mau = new System.Windows.Forms.TextBox();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.txtMau = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnTimlai = new System.Windows.Forms.Button();
@@ -94,13 +94,13 @@
             this.txtMasp.Size = new System.Drawing.Size(138, 20);
             this.txtMasp.TabIndex = 14;
             // 
-            // tb_tensp
+            // txtTensp
             // 
-            this.tb_tensp.Location = new System.Drawing.Point(266, 112);
-            this.tb_tensp.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_tensp.Name = "tb_tensp";
-            this.tb_tensp.Size = new System.Drawing.Size(138, 20);
-            this.tb_tensp.TabIndex = 13;
+            this.txtTensp.Location = new System.Drawing.Point(266, 112);
+            this.txtTensp.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTensp.Name = "txtTensp";
+            this.txtTensp.Size = new System.Drawing.Size(138, 20);
+            this.txtTensp.TabIndex = 13;
             // 
             // lb_tenkhach
             // 
@@ -124,21 +124,21 @@
             this.lb_ténp.TabIndex = 11;
             this.lb_ténp.Text = "Tên sản phẩm";
             // 
-            // tb_size
+            // txtSize
             // 
-            this.tb_size.Location = new System.Drawing.Point(266, 200);
-            this.tb_size.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_size.Name = "tb_size";
-            this.tb_size.Size = new System.Drawing.Size(138, 20);
-            this.tb_size.TabIndex = 21;
+            this.txtSize.Location = new System.Drawing.Point(266, 200);
+            this.txtSize.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(138, 20);
+            this.txtSize.TabIndex = 21;
             // 
-            // tb_mau
+            // txtMau
             // 
-            this.tb_mau.Location = new System.Drawing.Point(266, 158);
-            this.tb_mau.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_mau.Name = "tb_mau";
-            this.tb_mau.Size = new System.Drawing.Size(138, 20);
-            this.tb_mau.TabIndex = 20;
+            this.txtMau.Location = new System.Drawing.Point(266, 158);
+            this.txtMau.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMau.Name = "txtMau";
+            this.txtMau.Size = new System.Drawing.Size(138, 20);
+            this.txtMau.TabIndex = 20;
             // 
             // label2
             // 
@@ -204,15 +204,15 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnTimlai);
-            this.Controls.Add(this.tb_size);
-            this.Controls.Add(this.tb_mau);
+            this.Controls.Add(this.txtSize);
+            this.Controls.Add(this.txtMau);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bt_tim);
             this.Controls.Add(this.dtgw_sp);
             this.Controls.Add(this.txtMasp);
-            this.Controls.Add(this.tb_tensp);
+            this.Controls.Add(this.txtTensp);
             this.Controls.Add(this.lb_tenkhach);
             this.Controls.Add(this.lb_ténp);
             this.Name = "frmTimkiemSP";
@@ -230,11 +230,11 @@
         private System.Windows.Forms.Button bt_tim;
         private System.Windows.Forms.DataGridView dtgw_sp;
         private System.Windows.Forms.TextBox txtMasp;
-        private System.Windows.Forms.TextBox tb_tensp;
+        private System.Windows.Forms.TextBox txtTensp;
         private System.Windows.Forms.Label lb_tenkhach;
         private System.Windows.Forms.Label lb_ténp;
-        private System.Windows.Forms.TextBox tb_size;
-        private System.Windows.Forms.TextBox tb_mau;
+        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.TextBox txtMau;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnTimlai;

@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bcaoKHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bcaoKHDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bcaoKHDataset = new CSLT2_Suachuagiaydep.DatasetReport.BcaoKHDataset();
+            this.tblHDnhanhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bcaoHDnhanhang = new CSLT2_Suachuagiaydep.DatasetReport.BcaoHDnhanhang();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.rpvKH = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -50,19 +52,17 @@
             this.BcaoKHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bcaoKHTableAdapter = new CSLT2_Suachuagiaydep.DatasetReport.BcaoKHDatasetTableAdapters.BcaoKHTableAdapter();
             this.bcaoKHDatasetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bcaoHDnhanhang = new CSLT2_Suachuagiaydep.DatasetReport.BcaoHDnhanhang();
-            this.tblHDnhanhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblHDnhanhangTableAdapter = new CSLT2_Suachuagiaydep.DatasetReport.BcaoHDnhanhangTableAdapters.tblHDnhanhangTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHDnhanhangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDnhanhang)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BcaoKHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDnhanhang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHDnhanhangBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bcaoKHBindingSource1
@@ -79,6 +79,16 @@
             // 
             this.bcaoKHDataset.DataSetName = "BcaoKHDataset";
             this.bcaoKHDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblHDnhanhangBindingSource
+            // 
+            this.tblHDnhanhangBindingSource.DataMember = "tblHDnhanhang";
+            this.tblHDnhanhangBindingSource.DataSource = this.bcaoHDnhanhang;
+            // 
+            // bcaoHDnhanhang
+            // 
+            this.bcaoHDnhanhang.DataSetName = "BcaoHDnhanhang";
+            this.bcaoHDnhanhang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabControl1
             // 
@@ -108,14 +118,14 @@
             // 
             // rpvKH
             // 
-            reportDataSource3.Name = "BcaoKHDS";
-            reportDataSource3.Value = this.bcaoKHBindingSource1;
-            this.rpvKH.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "BcaoKHDS";
+            reportDataSource1.Value = this.bcaoKHBindingSource1;
+            this.rpvKH.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvKH.LocalReport.ReportEmbeddedResource = "CSLT2_Suachuagiaydep.DatasetReport.BcaoKHrpv.rdlc";
             this.rpvKH.Location = new System.Drawing.Point(30, 61);
             this.rpvKH.Name = "rpvKH";
             this.rpvKH.ServerReport.BearerToken = null;
-            this.rpvKH.Size = new System.Drawing.Size(703, 314);
+            this.rpvKH.Size = new System.Drawing.Size(703, 333);
             this.rpvKH.TabIndex = 6;
             // 
             // btnThongke
@@ -227,7 +237,7 @@
             this.rpvKHmax.Location = new System.Drawing.Point(25, 55);
             this.rpvKHmax.Name = "rpvKHmax";
             this.rpvKHmax.ServerReport.BearerToken = null;
-            this.rpvKHmax.Size = new System.Drawing.Size(702, 314);
+            this.rpvKHmax.Size = new System.Drawing.Size(709, 339);
             this.rpvKHmax.TabIndex = 0;
             // 
             // BcaoKHBindingSource
@@ -243,16 +253,6 @@
             // 
             this.bcaoKHDatasetBindingSource1.DataSource = this.bcaoKHDataset;
             this.bcaoKHDatasetBindingSource1.Position = 0;
-            // 
-            // bcaoHDnhanhang
-            // 
-            this.bcaoHDnhanhang.DataSetName = "BcaoHDnhanhang";
-            this.bcaoHDnhanhang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblHDnhanhangBindingSource
-            // 
-            this.tblHDnhanhangBindingSource.DataMember = "tblHDnhanhang";
-            this.tblHDnhanhangBindingSource.DataSource = this.bcaoHDnhanhang;
             // 
             // tblHDnhanhangTableAdapter
             // 
@@ -270,6 +270,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHDnhanhangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDnhanhang)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -277,8 +279,6 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BcaoKHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bcaoKHDatasetBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bcaoHDnhanhang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHDnhanhangBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

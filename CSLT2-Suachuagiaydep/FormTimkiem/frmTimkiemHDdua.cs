@@ -23,24 +23,23 @@ namespace CSLT2_Suachuagiaydep
         private void bt_timkiem_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((tb_HDD.Text == "") && (tb_masp.Text == "") && (tb_ngay.Text == "") && (tb_thang.Text == "") && (tb_nam.Text == ""))
+            if ((txtMaHDD.Text == "") && (txtNgay.Text == "") && (txtThang.Text == "") && (txtNam.Text == "") && (txtMasp.Text == ""))
             {
                 MessageBox.Show("hay nhap mot dieu kien", "Yêu cầu...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            sql = " Select MaHDdua, MaSP,MaKhach, Thanhtien,Ghichu from tblChitietHDduaxuong  where 1=1";
-            if (tb_HDD.Text != "")
-                sql = sql + "AND MaHDdua like N '%" + tb_HDD.Text + "%'";
-            if (tb_masp.Text != "")
-                sql = sql + "AND MaSP like N'%" + tb_masp.Text + "%'";
-            if (tb_ngay.Text != "")
-                sql = sql + "AND day(ngaydua) '%" + tb_ngay.Text + "%'";
-            if (tb_thang.Text != "")
-                sql = sql + "AND month(ngaydua) like N'%" + tb_thang.Text + "%'";
-            if (tb_nam.Text != "")
-                sql = sql + "AND year(ngaydua) like N '%" + tb_nam.Text + "%'";
-
+            sql = " Select a.mahddua,a.masp,a.makhach,ngaydua,thanhtien from tblChitietHDduaxuong as a join tblHDduaxuong as b on a.mahddua=b.mahddua   where 1=1";
+            if (txtMaHDD.Text != "")
+                sql = sql + "AND a.MAHDdua like N'%" + txtMaHDD.Text + "%'";
+            if (txtMasp.Text != "")
+                sql = sql + "AND a.masp like N'%" + txtMasp.Text + "%'";
+            if (txtThang.Text != "")
+                sql = sql + "AND month(ngaydua)='" + txtThang.Text + "'";
+            if (txtNam.Text != "")
+                sql = sql + "AND year(ngaydua) ='" + txtNam.Text + "'";
+            if (txtNgay.Text != "")
+                sql = sql + "AND day(ngaydua) = '" + txtNgay.Text + "'";
             tblHDD = Functions.GetDataToTable(sql);
             if (tblHDD.Rows.Count == 0)
             {
@@ -59,25 +58,20 @@ namespace CSLT2_Suachuagiaydep
                 if (ctl is TextBox)
                     ctl.Text = "";
 
-            tb_masp.Focus();
+            txtNgay.Focus();
         }
         private void Load_DataGridView()
         {
-            dtgw_HDD.Columns[0].HeaderText = " MaHDdua";
-            dtgw_HDD.Columns[1].HeaderText = " MaSP";
-            dtgw_HDD.Columns[2].HeaderText = " Makhach";
-            dtgw_HDD.Columns[3].HeaderText = "Size";
-            dtgw_HDD.Columns[4].HeaderText = "Mausac";
-            dtgw_HDD.Columns[4].HeaderText = "Dongia";
-            dtgw_HDD.Columns[5].HeaderText = "Giamgia";
-            dtgw_HDD.Columns[6].HeaderText = "Thanhtien";
-            dtgw_HDD.Columns[0].Width = 150;
+            dtgw_HDD.Columns[0].HeaderText = "Mã hoá đơn đưa";
+            dtgw_HDD.Columns[1].HeaderText = "Mã sản phẩm";
+            dtgw_HDD.Columns[2].HeaderText = "Mã khách";
+            dtgw_HDD.Columns[3].HeaderText = "Ngày đưa";
+            dtgw_HDD.Columns[4].HeaderText = "Thành tiền";
+            dtgw_HDD.Columns[0].Width = 100;
             dtgw_HDD.Columns[1].Width = 100;
-            dtgw_HDD.Columns[2].Width = 80;
-            dtgw_HDD.Columns[3].Width = 80;
-            dtgw_HDD.Columns[4].Width = 80;
-            dtgw_HDD.Columns[5].Width = 80;
-            dtgw_HDD.Columns[6].Width = 80;
+            dtgw_HDD.Columns[2].Width = 100;
+            dtgw_HDD.Columns[3].Width = 100;
+            dtgw_HDD.Columns[4].Width = 100;
             dtgw_HDD.AllowUserToAddRows = false;
             dtgw_HDD.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
@@ -99,10 +93,10 @@ namespace CSLT2_Suachuagiaydep
             if (MessageBox.Show("Bạn có muốn hiển thị thông tin chi tiết", "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
             {
                 MaHDdua = dtgw_HDD.CurrentRow.Cells["MaHDdua"].Value.ToString();
-                frmHDduaxuong frm = new frmHDduaxuong();
-                frm.Text = MaHDdua;
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.ShowDialog();
+                frmHDduaxuong a = new frmHDduaxuong();
+                a.txtMaHDdua.Text = MaHDdua;
+                a.StartPosition = FormStartPosition.CenterScreen;
+                a.ShowDialog();
             }
         }
     }

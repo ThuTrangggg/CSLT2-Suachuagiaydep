@@ -71,10 +71,10 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(28, 27);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(760, 411);
+            this.tabControl1.Size = new System.Drawing.Size(776, 426);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -88,7 +88,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(752, 385);
+            this.tabPage1.Size = new System.Drawing.Size(768, 400);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách hoá đơn nhận ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             this.rpvBcaoHDnhan.Location = new System.Drawing.Point(22, 50);
             this.rpvBcaoHDnhan.Name = "rpvBcaoHDnhan";
             this.rpvBcaoHDnhan.ServerReport.BearerToken = null;
-            this.rpvBcaoHDnhan.Size = new System.Drawing.Size(703, 306);
+            this.rpvBcaoHDnhan.Size = new System.Drawing.Size(721, 333);
             this.rpvBcaoHDnhan.TabIndex = 0;
             // 
             // bcaoHDnhanhangBindingSource

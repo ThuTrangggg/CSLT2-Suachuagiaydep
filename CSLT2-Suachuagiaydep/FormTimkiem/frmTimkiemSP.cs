@@ -29,26 +29,26 @@ namespace CSLT2_Suachuagiaydep
                 if (ctl is TextBox)
                     ctl.Text = "";
 
-            tb_tensp.Focus();
+            txtTensp.Focus();
         }
 
         private void bt_tim_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((tb_tensp.Text == "") && (txtMasp.Text == "") && (tb_mau.Text == "") && (tb_size.Text == ""))
+            if ((txtTensp.Text == "") && (txtMasp.Text == "") && (txtMau.Text == "") && (txtSize.Text == ""))
             {
                 MessageBox.Show("hay nhap mot dieu kien", "Yêu cầu...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = " select * from tblSanpham where 1=1";
-            if (tb_tensp.Text != "")
-                sql = sql + "AND TenSP like N'%" + tb_tensp.Text + "%'";
+            sql = " select masp,tensp,soluong,dongia,mau,size,ghichu from tblSanpham where 1=1";
+            if (txtTensp.Text != "")
+                sql = sql + "AND TenSP like N'%" + txtTensp.Text + "%'";
             if (txtMasp.Text != "")
                 sql = sql + "AND masp like N'%" + txtMasp.Text + "%'";
-            if (tb_mau.Text != "")
-                sql = sql + "AND Mau like N '%" + tb_mau.Text + "%'";
-            if (tb_size.Text != "")
-                sql = sql + "AND Size like N'%" + tb_size.Text + "%'";
+            if (txtMau.Text != "")
+                sql = sql + "AND mau like N'%"+txtMau.Text + "%'";
+            if (txtSize.Text != "")
+                sql = sql + "AND Size like N'%" + txtSize.Text + "%'";
             tblSP = Functions.GetDataToTable(sql);
             if (tblSP.Rows.Count == 0)
             {
@@ -62,13 +62,13 @@ namespace CSLT2_Suachuagiaydep
         }
         private void Load_dtgw_sp()
         {
-            dtgw_sp.Columns[0].HeaderText = " MaSP";
-            dtgw_sp.Columns[1].HeaderText = " TenSP";
-            dtgw_sp.Columns[2].HeaderText = "Soluong";
-            dtgw_sp.Columns[3].HeaderText = "Dongia";
-            dtgw_sp.Columns[4].HeaderText = "Mau";
+            dtgw_sp.Columns[0].HeaderText = " Mã sản phẩm";
+            dtgw_sp.Columns[1].HeaderText = " Tên sản phẩm";
+            dtgw_sp.Columns[2].HeaderText = "Số lượng";
+            dtgw_sp.Columns[3].HeaderText = "Đơn giá";
+            dtgw_sp.Columns[4].HeaderText = "Màu";
             dtgw_sp.Columns[5].HeaderText = "Size";
-            dtgw_sp.Columns[6].HeaderText = "Ghichu";
+            dtgw_sp.Columns[6].HeaderText = "Ghi chú";
 
             dtgw_sp.Columns[0].Width = 150;
             dtgw_sp.Columns[1].Width = 100;
@@ -99,7 +99,7 @@ namespace CSLT2_Suachuagiaydep
             {
                 MaSP = dtgw_sp.CurrentRow.Cells["MaSP"].Value.ToString();
                 frmSanpham frm = new frmSanpham();
-                frm.Text = MaSP;
+                frm.txtMaSP.Text = MaSP;
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.ShowDialog();
             }

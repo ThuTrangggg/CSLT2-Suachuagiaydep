@@ -664,7 +664,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboMakhach;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaHDnhan;
+        public System.Windows.Forms.TextBox txtMaHDnhan;
         private System.Windows.Forms.ComboBox cboManhanvien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

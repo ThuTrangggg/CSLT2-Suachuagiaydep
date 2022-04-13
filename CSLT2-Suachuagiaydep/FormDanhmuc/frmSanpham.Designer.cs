@@ -174,6 +174,7 @@
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Size = new System.Drawing.Size(105, 20);
             this.txtMaSP.TabIndex = 26;
+            this.txtMaSP.TextChanged += new System.EventHandler(this.txtMaSP_TextChanged);
             // 
             // DataGridViewSP
             // 
@@ -442,7 +443,7 @@
         private System.Windows.Forms.TextBox txtDongia;
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.TextBox txtSoluong;
-        private System.Windows.Forms.TextBox txtMaSP;
+        public System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.DataGridView DataGridViewSP;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnBoqua;

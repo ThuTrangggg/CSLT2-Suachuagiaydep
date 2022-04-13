@@ -28,27 +28,27 @@ namespace CSLT2_Suachuagiaydep
             foreach (Control ctl in this.Controls)
                 if (ctl is TextBox)
                     ctl.Text = "";
-            tb_maHD.Focus();
+            txtMaHDN.Focus();
         }
         private void bt_tim_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((tb_maHD.Text == "") && (tb_thang.Text == "") && (tb_nam.Text == "") && (tb_tenkhach.Text == ""))
+            if ((txtMaHDN.Text == "") && (txtNgaynhan.Text == "") && (txtThang.Text == "") && (txtTenkhach.Text == ""))
             {
                 MessageBox.Show("hay nhap mot dieu kien", "Yêu cầu...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = " Select * from tblHDnhanhang where 1=1";
-            if (tb_maHD.Text != "")
-                sql = sql + "AND MAHDnhan like N'%" + tb_maHD.Text + "%'";
-            if (tb_ngay.Text != "")
-                sql = sql + "AND day(Ngaynhan) like N '%" +tb_ngay.Text+ "%'";
-            if (tb_thang.Text != "")
-                sql = sql + "AND month(Ngaynhan) like N'%" + tb_thang.Text + "%'";
-            if (tb_nam.Text != "")
-                sql = sql + "AND Year(Ngaynhan) like N '%" + tb_nam.Text + "%'";
-            if (tb_tenkhach.Text != "")
-                sql = sql + "AND Makhach like N'%" + tb_tenkhach.Text + "%'";
+            sql = " Select mahdnhan,manv,a.makhach,ngaynhan,tongtien from tblHDnhanhang a join tblKhachhang b on a.makhach=b.makhach where 1=1";
+            if (txtMaHDN.Text != "")
+                sql = sql + "AND MAHDnhan like N'%" + txtMaHDN.Text + "%'";
+            if (txtNam.Text != "")
+                sql = sql + "AND year(Ngaynhan) ='" +txtNam.Text+ "'";
+            if (txtNgaynhan.Text != "")
+                sql = sql + "AND day(Ngaynhan) = '" + txtNgaynhan.Text + "'";
+            if (txtThang.Text != "")
+                sql = sql + "AND month(Ngaynhan) ='" + txtThang.Text + "'";
+            if (txtTenkhach.Text != "")
+                sql = sql + "AND tenkhach like N'%" + txtTenkhach.Text + "'";
             tblHD = Functions.GetDataToTable(sql);
             if (tblHD.Rows.Count == 0)
             {
@@ -56,22 +56,22 @@ namespace CSLT2_Suachuagiaydep
                 resetvalues();
             }
             else
-                MessageBox.Show("có" + tblHD.Rows.Count + "bản ghi thoả mãn", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("có " + tblHD.Rows.Count + " bản ghi thoả mãn", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             dtgv_HD.DataSource = tblHD;
             Load_DataGridView();
         }
         private void Load_DataGridView()
         {
-            dtgv_HD.Columns[0].HeaderText = " MaHDnhan";
-            dtgv_HD.Columns[1].HeaderText = " MaNV";
-            dtgv_HD.Columns[2].HeaderText = " Makhach";
-            dtgv_HD.Columns[3].HeaderText = " Ngaynhan";
-            dtgv_HD.Columns[4].HeaderText = " Tongtien";
-            dtgv_HD.Columns[0].Width = 150;
+            dtgv_HD.Columns[0].HeaderText = " Mã hoá đơn nhận";
+            dtgv_HD.Columns[1].HeaderText = " Mã nhân viên";
+            dtgv_HD.Columns[2].HeaderText = " Mã khách";
+            dtgv_HD.Columns[3].HeaderText = " Ngày nhận";
+            dtgv_HD.Columns[4].HeaderText = " Tổng tiền";
+            dtgv_HD.Columns[0].Width = 120;
             dtgv_HD.Columns[1].Width = 100;
-            dtgv_HD.Columns[2].Width = 80;
-            dtgv_HD.Columns[3].Width = 80;
-            dtgv_HD.Columns[4].Width = 80;
+            dtgv_HD.Columns[2].Width = 100;
+            dtgv_HD.Columns[3].Width = 100;
+            dtgv_HD.Columns[4].Width = 100;
             dtgv_HD.AllowUserToAddRows = false;
             dtgv_HD.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
@@ -95,7 +95,7 @@ namespace CSLT2_Suachuagiaydep
             {
                 MaHDnhan = dtgv_HD.CurrentRow.Cells["MaHDnhan"].Value.ToString();
                 frmHDnhan frm = new frmHDnhan();
-                frm.Text = MaHDnhan;
+                frm.txtMaHDnhan.Text = MaHDnhan;
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.ShowDialog();
             }

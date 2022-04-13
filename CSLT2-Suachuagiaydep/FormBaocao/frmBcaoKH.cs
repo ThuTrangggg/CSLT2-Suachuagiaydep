@@ -112,15 +112,23 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
         private void rdoThang_CheckedChanged(object sender, EventArgs e)
         {
             cboLuachon.Text = "";
+            rpvKH.LocalReport.DataSources.Clear();
+            rpvKH.RefreshReport();
+
         }
         private void rdoQuy_CheckedChanged(object sender, EventArgs e)
         {
             cboLuachon.Text = "";
+            rpvKH.LocalReport.DataSources.Clear();
+            rpvKH.RefreshReport();
+
         }
         private void rdoNam_CheckedChanged(object sender, EventArgs e)
         {
             cboLuachon.Text = "";
             cboLuachon.Text = "2022";
+            rpvKH.LocalReport.DataSources.Clear();
+            rpvKH.RefreshReport();
 
         }
 

@@ -120,7 +120,7 @@
             this.rptSPdatra.Location = new System.Drawing.Point(21, 56);
             this.rptSPdatra.Name = "rptSPdatra";
             this.rptSPdatra.ServerReport.BearerToken = null;
-            this.rptSPdatra.Size = new System.Drawing.Size(727, 246);
+            this.rptSPdatra.Size = new System.Drawing.Size(727, 338);
             this.rptSPdatra.TabIndex = 1;
             // 
             // dtpSPdatra
@@ -154,7 +154,7 @@
             this.rpvSPchuatracuahang.Location = new System.Drawing.Point(20, 51);
             this.rpvSPchuatracuahang.Name = "rpvSPchuatracuahang";
             this.rpvSPchuatracuahang.ServerReport.BearerToken = null;
-            this.rpvSPchuatracuahang.Size = new System.Drawing.Size(727, 329);
+            this.rpvSPchuatracuahang.Size = new System.Drawing.Size(727, 343);
             this.rpvSPchuatracuahang.TabIndex = 2;
             // 
             // btnSPchuatracuahang

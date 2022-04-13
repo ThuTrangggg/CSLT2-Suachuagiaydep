@@ -255,5 +255,14 @@ namespace CSLT2_Suachuagiaydep
                 txtAnh.Text = dlgOpen.FileName;
             }
         }
+
+        private void txtMaSP_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaSP.Text != "")
+            {
+                string str = "select tensp from tblSanpham where masp =N'" + txtMaSP.Text + "'";
+                txtTenSP.Text = Functions.GetFieldValues(str);
+            }
+        }
     }
 }

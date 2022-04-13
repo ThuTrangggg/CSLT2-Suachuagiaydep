@@ -281,7 +281,7 @@
         private System.Windows.Forms.MaskedTextBox mskDienthoai;
         private System.Windows.Forms.TextBox txtDiachi;
         private System.Windows.Forms.TextBox txtTenkhach;
-        private System.Windows.Forms.TextBox txtMakhach;
+        public System.Windows.Forms.TextBox txtMakhach;
         private System.Windows.Forms.DataGridView dataGridViewKH;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

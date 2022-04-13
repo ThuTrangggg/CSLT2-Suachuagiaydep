@@ -438,6 +438,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyGiayDep.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\PNG-24\Save.png" />
+    <None Include="Resources\PNG-24\Delete.png" />
+    <None Include="Resources\PNG-24\Add.png" />
+    <None Include="Resources\PNG-24\Exit.png" />
+    <None Include="Resources\PNG-24\Back.png" />
+    <None Include="Resources\PNG-24\Print.png" />
+    <None Include="Resources\PNG-24\Modify.png" />
+    <None Include="Resources\ICO\Delete.ico" />
+    <None Include="Resources\ICO\Add.ico" />
     <None Include="Resources\PNG-24\Search.png" />
     <None Include="Resources\anh2.jpg" />
     <None Include="Resources\anh1.jpg" />

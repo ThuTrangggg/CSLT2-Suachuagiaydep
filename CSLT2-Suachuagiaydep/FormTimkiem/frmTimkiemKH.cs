@@ -39,7 +39,7 @@ namespace CSLT2_Suachuagiaydep
                 resetvalues();
             }
             else
-                MessageBox.Show("có" + tblKH.Rows.Count + "bản ghi thoả mãn", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("có " + tblKH.Rows.Count + " bản ghi thoả mãn", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             dtgw_KH.DataSource = tblKH;
             Load_dtgw_sp();
         }
@@ -87,7 +87,7 @@ namespace CSLT2_Suachuagiaydep
             {
                 Makhach = dtgw_KH.CurrentRow.Cells["Makhach"].Value.ToString();
                 frmKhachhang frm = new frmKhachhang();
-                frm.Text = Makhach;
+                frm.txtMakhach.Text = Makhach;
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.ShowDialog();
             }

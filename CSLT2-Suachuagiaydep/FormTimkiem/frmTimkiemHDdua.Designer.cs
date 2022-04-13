@@ -38,7 +38,7 @@
             this.dtgw_HDD = new System.Windows.Forms.DataGridView();
             this.tb_ngay = new System.Windows.Forms.TextBox();
             this.tb_thang = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_HDD = new System.Windows.Forms.TextBox();
             this.lb_thang = new System.Windows.Forms.Label();
             this.lb_ngay = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -127,6 +127,7 @@
             this.dtgw_HDD.RowTemplate.Height = 24;
             this.dtgw_HDD.Size = new System.Drawing.Size(551, 183);
             this.dtgw_HDD.TabIndex = 19;
+            this.dtgw_HDD.DoubleClick += new System.EventHandler(this.dtgw_HDD_DoubleClick);
             // 
             // tb_ngay
             // 
@@ -144,13 +145,13 @@
             this.tb_thang.Size = new System.Drawing.Size(130, 20);
             this.tb_thang.TabIndex = 17;
             // 
-            // textBox1
+            // tb_HDD
             // 
-            this.textBox1.Location = new System.Drawing.Point(279, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 16;
+            this.tb_HDD.Location = new System.Drawing.Point(279, 59);
+            this.tb_HDD.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_HDD.Name = "tb_HDD";
+            this.tb_HDD.Size = new System.Drawing.Size(130, 20);
+            this.tb_HDD.TabIndex = 16;
             // 
             // lb_thang
             // 
@@ -202,6 +203,7 @@
             this.btnDong.Text = "Đóng";
             this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnTimlai
             // 
@@ -217,6 +219,7 @@
             this.btnTimlai.Text = "Tìm lại";
             this.btnTimlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimlai.UseVisualStyleBackColor = false;
+            this.btnTimlai.Click += new System.EventHandler(this.btnTimlai_Click);
             // 
             // frmTimkiemHDdua
             // 
@@ -236,7 +239,7 @@
             this.Controls.Add(this.dtgw_HDD);
             this.Controls.Add(this.tb_ngay);
             this.Controls.Add(this.tb_thang);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_HDD);
             this.Controls.Add(this.lb_thang);
             this.Controls.Add(this.lb_ngay);
             this.Controls.Add(this.label1);
@@ -260,7 +263,7 @@
         private System.Windows.Forms.DataGridView dtgw_HDD;
         private System.Windows.Forms.TextBox tb_ngay;
         private System.Windows.Forms.TextBox tb_thang;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_HDD;
         private System.Windows.Forms.Label lb_thang;
         private System.Windows.Forms.Label lb_ngay;
         private System.Windows.Forms.Label label1;

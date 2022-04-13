@@ -125,6 +125,7 @@
             this.dtgv_HD.RowTemplate.Height = 24;
             this.dtgv_HD.Size = new System.Drawing.Size(650, 196);
             this.dtgv_HD.TabIndex = 20;
+            this.dtgv_HD.DoubleClick += new System.EventHandler(this.dtgv_HD_DoubleClick);
             // 
             // tb_ngay
             // 
@@ -198,6 +199,7 @@
             this.btnDong.Text = "Đóng";
             this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnTimlai
             // 
@@ -213,6 +215,7 @@
             this.btnTimlai.Text = "Tìm lại";
             this.btnTimlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimlai.UseVisualStyleBackColor = false;
+            this.btnTimlai.Click += new System.EventHandler(this.btnTimlai_Click);
             // 
             // frmTimkiemHDnhan
             // 

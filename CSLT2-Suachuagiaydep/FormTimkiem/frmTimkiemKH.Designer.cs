@@ -77,6 +77,7 @@
             this.dtgw_KH.RowTemplate.Height = 24;
             this.dtgw_KH.Size = new System.Drawing.Size(578, 229);
             this.dtgw_KH.TabIndex = 11;
+            this.dtgw_KH.DoubleClick += new System.EventHandler(this.dtgw_KH_DoubleClick);
             // 
             // tb_tennkhach
             // 
@@ -128,6 +129,7 @@
             this.btnDong.Text = "Đóng";
             this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnTimlai
             // 
@@ -143,6 +145,7 @@
             this.btnTimlai.Text = "Tìm lại";
             this.btnTimlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimlai.UseVisualStyleBackColor = false;
+            this.btnTimlai.Click += new System.EventHandler(this.btnTimlai_Click);
             // 
             // frmTimkiemKH
             // 

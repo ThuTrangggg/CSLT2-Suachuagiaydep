@@ -38,15 +38,17 @@ namespace CSLT2_Suachuagiaydep
                 MessageBox.Show("hay nhap mot dieu kien", "Yêu cầu...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = " Select * from frmChitietHDnhanhang where 1=1";
+            sql = " Select * from tblHDnhanhang where 1=1";
             if (tb_maHD.Text != "")
-                sql = sql + "AND MAHD like N'%" + tb_maHD + "%'";
+                sql = sql + "AND MAHDnhan like N'%" + tb_maHD.Text + "%'";
+            if (tb_ngay.Text != "")
+                sql = sql + "AND day(Ngaynhan) like N '%" +tb_ngay.Text+ "%'";
             if (tb_thang.Text != "")
-                sql = sql + "AND THang like N'%" + tb_thang + "%'";
+                sql = sql + "AND month(Ngaynhan) like N'%" + tb_thang.Text + "%'";
             if (tb_nam.Text != "")
-                sql = sql + "AND nam like N '%" + tb_nam + "%'";
+                sql = sql + "AND Year(Ngaynhan) like N '%" + tb_nam.Text + "%'";
             if (tb_tenkhach.Text != "")
-                sql = sql + "AND tenkhach like N'%" + tb_tenkhach + "%'";
+                sql = sql + "AND Makhach like N'%" + tb_tenkhach.Text + "%'";
             tblHD = Functions.GetDataToTable(sql);
             if (tblHD.Rows.Count == 0)
             {
@@ -61,7 +63,7 @@ namespace CSLT2_Suachuagiaydep
         private void Load_DataGridView()
         {
             dtgv_HD.Columns[0].HeaderText = " MaHDnhan";
-            dtgv_HD.Columns[1].HeaderText = " Ngaynhan";
+            dtgv_HD.Columns[1].HeaderText = " MaNV";
             dtgv_HD.Columns[2].HeaderText = " Makhach";
             dtgv_HD.Columns[3].HeaderText = " Ngaynhan";
             dtgv_HD.Columns[4].HeaderText = " Tongtien";
@@ -72,6 +74,31 @@ namespace CSLT2_Suachuagiaydep
             dtgv_HD.Columns[4].Width = 80;
             dtgv_HD.AllowUserToAddRows = false;
             dtgv_HD.EditMode = DataGridViewEditMode.EditProgrammatically;
+        }
+
+        private void btnTimlai_Click(object sender, EventArgs e)
+        {
+            resetvalues();
+            dtgv_HD.DataSource = null;
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void dtgv_HD_DoubleClick(object sender, EventArgs e)
+        {
+            string MaHDnhan;
+            if (MessageBox.Show("Bạn có muốn hiển thị thông tin chi tiết", "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+            {
+                MaHDnhan = dtgv_HD.CurrentRow.Cells["MaHDnhan"].Value.ToString();
+                frmHDnhan frm = new frmHDnhan();
+                frm.Text = MaHDnhan;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.ShowDialog();
+            }
         }
     }
 }

@@ -26,11 +26,11 @@ namespace CSLT2_Suachuagiaydep
                 MessageBox.Show("hay nhap mot dieu kien", "Yêu cầu...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = " Select * from frmChitietHDnhanhang where 1=1";
+            sql = " Select * from tblKhachhang where 1=1";
             if (tb_makhach.Text != "")
-                sql = sql + "AND MAHD like N'%" + tb_makhach + "%'";
+                sql = sql + "AND Makhach like N'%" + tb_makhach.Text + "%'";
             if (tb_tennkhach.Text != "")
-                sql = sql + "AND THang like N'%" + tb_tennkhach + "%'";
+                sql = sql + "AND Tenkhach like N'%" + tb_tennkhach.Text + "%'";
 
             tblKH = Functions.GetDataToTable(sql);
             if (tblKH.Rows.Count == 0)
@@ -45,10 +45,10 @@ namespace CSLT2_Suachuagiaydep
         }
         private void Load_dtgw_sp()
         {
-            dtgw_KH.Columns[0].HeaderText = " Max khách";
-            dtgw_KH.Columns[1].HeaderText = " Tên khách";
-            dtgw_KH.Columns[2].HeaderText = " Địa chỉ";
-            dtgw_KH.Columns[3].HeaderText = " Điện thoại";
+            dtgw_KH.Columns[0].HeaderText = "Makhach";
+            dtgw_KH.Columns[1].HeaderText = " Tenkhach";
+            dtgw_KH.Columns[2].HeaderText = " Diachi";
+            dtgw_KH.Columns[3].HeaderText = " Dianthoai";
 
 
             dtgw_KH.Columns[0].Width = 150;
@@ -72,6 +72,30 @@ namespace CSLT2_Suachuagiaydep
         {
             resetvalues();
             dtgw_KH.DataSource = null;
+        }
+
+        private void btnTimlai_Click(object sender, EventArgs e)
+        {
+            resetvalues();
+            dtgw_KH.DataSource = null;
+        }
+
+        private void dtgw_KH_DoubleClick(object sender, EventArgs e)
+        {
+            string Makhach;
+            if (MessageBox.Show("Bạn có muốn hiển thị thông tin chi tiết", "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+            {
+                Makhach = dtgw_KH.CurrentRow.Cells["Makhach"].Value.ToString();
+                frmKhachhang frm = new frmKhachhang();
+                frm.Text = Makhach;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

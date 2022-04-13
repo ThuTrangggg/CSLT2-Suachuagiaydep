@@ -65,6 +65,23 @@ namespace CSLT2_Suachuagiaydep
             cmd.Dispose();
             cmd = null;
         }
+        public static void RunSqlDel(string sql)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Functions.Conn;
+            cmd.CommandText = sql;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (System.Exception)
+            {
+                MessageBox.Show("Dữ liệu đang được dùng, không thể xóa...", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            cmd.Dispose();
+            cmd = null;
+        }
+
         public static void fillcombo(string sql, ComboBox cb, string ma, string hienthi)
         {
             SqlDataAdapter a = new SqlDataAdapter(sql,Functions.Conn);

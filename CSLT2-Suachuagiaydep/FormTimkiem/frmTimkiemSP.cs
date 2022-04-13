@@ -35,20 +35,20 @@ namespace CSLT2_Suachuagiaydep
         private void bt_tim_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((tb_tensp.Text == "") && (tb_tenkhach.Text == "") && (tb_mau.Text == "") && (tb_size.Text == ""))
+            if ((tb_tensp.Text == "") && (txtMasp.Text == "") && (tb_mau.Text == "") && (tb_size.Text == ""))
             {
                 MessageBox.Show("hay nhap mot dieu kien", "Yêu cầu...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = " Select * from frmChitietHDnhanhang where 1=1";
+            sql = " select * from tblSanpham where 1=1";
             if (tb_tensp.Text != "")
-                sql = sql + "AND MAHD like N'%" + tb_tensp + "%'";
-            if (tb_tenkhach.Text != "")
-                sql = sql + "AND THang like N'%" + tb_tenkhach + "%'";
+                sql = sql + "AND TenSP like N'%" + tb_tensp.Text + "%'";
+            if (txtMasp.Text != "")
+                sql = sql + "AND masp like N'%" + txtMasp.Text + "%'";
             if (tb_mau.Text != "")
-                sql = sql + "AND nam like N '%" + tb_mau + "%'";
+                sql = sql + "AND Mau like N '%" + tb_mau.Text + "%'";
             if (tb_size.Text != "")
-                sql = sql + "AND tenkhach like N'%" + tb_size + "%'";
+                sql = sql + "AND Size like N'%" + tb_size.Text + "%'";
             tblSP = Functions.GetDataToTable(sql);
             if (tblSP.Rows.Count == 0)
             {
@@ -63,17 +63,46 @@ namespace CSLT2_Suachuagiaydep
         private void Load_dtgw_sp()
         {
             dtgw_sp.Columns[0].HeaderText = " MaSP";
-            dtgw_sp.Columns[1].HeaderText = " Ten SP";
-            dtgw_sp.Columns[2].HeaderText = " Số lượng";
-            dtgw_sp.Columns[3].HeaderText = " Đơn giá";
+            dtgw_sp.Columns[1].HeaderText = " TenSP";
+            dtgw_sp.Columns[2].HeaderText = "Soluong";
+            dtgw_sp.Columns[3].HeaderText = "Dongia";
+            dtgw_sp.Columns[4].HeaderText = "Mau";
+            dtgw_sp.Columns[5].HeaderText = "Size";
+            dtgw_sp.Columns[6].HeaderText = "Ghichu";
 
             dtgw_sp.Columns[0].Width = 150;
             dtgw_sp.Columns[1].Width = 100;
             dtgw_sp.Columns[2].Width = 80;
             dtgw_sp.Columns[3].Width = 80;
-
+            dtgw_sp.Columns[4].Width = 80;
+            dtgw_sp.Columns[5].Width = 80;
+            dtgw_sp.Columns[6].Width = 80;
             dtgw_sp.AllowUserToAddRows = false;
             dtgw_sp.EditMode = DataGridViewEditMode.EditProgrammatically;
+        }
+
+        private void btnTimlai_Click(object sender, EventArgs e)
+        {
+            resetvalues();
+            dtgw_sp.DataSource = null;
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dtgw_sp_DoubleClick(object sender, EventArgs e)
+        {
+            string MaSP;
+            if (MessageBox.Show("Bạn có muốn hiển thị thông tin chi tiết", "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+            {
+                MaSP = dtgw_sp.CurrentRow.Cells["MaSP"].Value.ToString();
+                frmSanpham frm = new frmSanpham();
+                frm.Text = MaSP;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.ShowDialog();
+            }
         }
     }
 }

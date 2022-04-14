@@ -69,8 +69,8 @@ namespace CSLT2_Suachuagiaydep
             sql = "SELECT Makhach FROM tblHDnhanhang WHERE MaHDnhan = N'" + txtMaHDnhan.Text + "'";
             cboMakhach.SelectedValue = Functions.GetFieldValues(sql);
             sql = "SELECT Tongtien FROM tblHDnhanhang WHERE MaHDnhan = N'" + txtMaHDnhan.Text + "'";
-            txtTGbaohanh.Text = Functions.GetFieldValues(sql);
-            txtChatlieu.Text = Functions.GetFieldValues(sql);
+            //txtTGbaohanh.Text = Functions.GetFieldValues(sql);
+            //txtChatlieu.Text = Functions.GetFieldValues(sql);
             txtTongtien.Text = Functions.GetFieldValues(sql);
             lblTongtien.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(txtTongtien.Text);
         }
@@ -766,7 +766,7 @@ namespace CSLT2_Suachuagiaydep
 
         private void cboMaHDnhan_DropDown_1(object sender, EventArgs e)
         {
-            Functions.fillcombo("SELECT mahddua FROM tblhdnhanhang", cboMaHDnhan, "mahdnhan", "mahdnhan");
+            Functions.fillcombo("SELECT mahdnhan FROM tblhdnhanhang", cboMaHDnhan, "mahdnhan", "mahdnhan");
             cboMaHDnhan.SelectedIndex = -1;
         }
 

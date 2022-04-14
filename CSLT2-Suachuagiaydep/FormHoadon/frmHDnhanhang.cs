@@ -126,7 +126,6 @@ namespace CSLT2_Suachuagiaydep
             txtDongia.Text = "0";
             txtThanhtien.Text = "0";
             txtAnh.Text = "";
-            txtTongtien.Text = "0";
             lblTongtien.Text = "Bằng chữ: ";
             picAnh.Image = null;
         }
@@ -345,10 +344,15 @@ namespace CSLT2_Suachuagiaydep
                 cboMaSP.Focus();
                 return;
             }*/
+            if (txtAnh.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn ảnh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAnh.Focus();
+                return;
+            }
             if ((txtSoluong.Text.Trim().Length == 0) || (txtSoluong.Text == "0"))
             {
                 MessageBox.Show("Bạn phải nhập số lượng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSoluong.Text = "";
                 txtSoluong.Focus();
                 return;
             }
@@ -358,7 +362,6 @@ namespace CSLT2_Suachuagiaydep
                 txtGiamgia.Focus();
                 return;
             }
-
             sql = "SELECT MaSP FROM tblChitietHDnhanhang WHERE MaSP=N'" + txtMaSP.Text + "' " +
                 "AND MaHDnhan = N'" + txtMaHDnhan.Text.Trim() + "'";
             if (Functions.checkkey(sql))
@@ -370,14 +373,14 @@ namespace CSLT2_Suachuagiaydep
             }
 
             // Kiểm tra xem số lượng hàng trong kho còn đủ để cung cấp không?
-            /*sl = Convert.ToDouble(Functions.GetFieldValues("SELECT Soluong FROM tblSanpham " +
-                "WHERE masp = N'" + txtMaSP.Text + "'"));
-            *//*if (sl > 50)*//*
-            {
-                MessageBox.Show("Hang ton con nhieu, khong nhap nua" + sl, "Thông báo", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }*/
+            /* sl = Convert.ToDouble(Functions.GetFieldValues("SELECT Soluong FROM tblSanpham " +
+                 "WHERE masp = N'" + txtMaSP.Text + "'"));
+             if (sl > 50)
+             {
+                 MessageBox.Show("Hang ton con nhieu, khong nhap nua" + sl, "Thông báo",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 return;
+             }*/
             string yeucau = "";
 
             if (chkVesinh.Checked == true)
@@ -395,10 +398,10 @@ namespace CSLT2_Suachuagiaydep
             {
                 dtra = "Rồi";
             } else dtra = "Chưa";
+
             sql = "insert into tblSanpham values(N'" + txtMaSP.Text + "','" + txtTenSP.Text + "','" + txtAnh.Text + "','"
                 + txtGhichu.Text + "','" + txtSoluong.Text + "','" + txtDongia.Text + "','" + txtSize.Text + "','" + txtMausac.Text + "')";
             Functions.runsql(sql);
-            MessageBox.Show("1");
 
             sql = "Insert into tblChitietHDnhanhang (MaHDnhan, MaSP, Mau, Size, Chatlieu,TGbaohanh, " +
                 "soluong,Anh,Khuyenmai,Thanhtien,ghichu,datrakhach,yeucaulam,dongia) " +
@@ -412,24 +415,28 @@ namespace CSLT2_Suachuagiaydep
             load_datagridchitiet();
 
             // Cập nhật lại
-            //SLmoi = sl + Convert.ToDouble(txtSoluong.Text);
-            /*sql = "UPDATE tblSanpham SET Soluong =" + SLmoi + " WHERE MaSP= N'" + txtMaSP.Text + "'";
-            Functions.runsql(sql);*/
+            /*SLmoi = sl + Convert.ToDouble(txtSoluong.Text);
+            sql = "UPDATE tblSanpham SET Soluong =" + SLmoi + " WHERE MaSP= N'" + txtMaSP.Text + "'";
+            Functions.runsql(sql);
 
-            /*double gnmoi;
+            double gnmoi;
             gnmoi = Convert.ToDouble(Functions.GetFieldValues("SELECT Dongia FROM tblChitietHDnhanhang WHERE MaSP= N'" + txtMaSP.Text + "'"));
             txtDongia.Text = gnmoi.ToString();
             sql = "UPDATE tblSanpham SET Dongia  =" + gnmoi + " WHERE MaSP= N'" + txtMaSP.Text + "'";
             Functions.runsql(sql);
             sql = "UPDATE tblSanpham SET Dongia =" + 110 * gnmoi / 100 + " WHERE MaSP= N'" + txtMaSP.Text + "'";
-            Functions.runsql(sql);*/
-
+            Functions.runsql(sql);
+*/
             // Cập nhật lại tổng tiền cho hóa đơn nhập
 
-            tong = Convert.ToDouble(Functions.GetFieldValues("SELECT TongTien FROM tblHDnhanhang WHERE MaHDnhan = '" + txtMaHDnhan.Text + "'"));
+            tong = Convert.ToDouble(Functions.GetFieldValues("SELECT TongTien FROM tblHDnhanhang" +
+                " WHERE MaHDnhan = '" + txtMaHDnhan.Text + "'"));
+
             Tongmoi = tong + Convert.ToDouble(txtThanhtien.Text);
             sql = "UPDATE tblHDnhanhang SET Tongtien =" + Tongmoi + " WHERE MaHDnhan = N'" + txtMaHDnhan.Text + "'";
             Functions.runsql(sql);
+
+            
             txtTongtien.Text = Tongmoi.ToString();
             lblTongtien.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(Tongmoi.ToString());
             ResetValuesSanpham();
@@ -456,9 +463,7 @@ namespace CSLT2_Suachuagiaydep
             txtMaSP.Text = Functions.CreateKey("SP");
             load_datagridchitiet();
         }
-
         
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             btnThemhd.Enabled = true;
@@ -634,6 +639,7 @@ namespace CSLT2_Suachuagiaydep
                 btnThemSP.Enabled = true;
                 txtMaSP.Text = Functions.CreateKey("SP");
             }
+            btnLuuhd.Enabled = true;
         }
 
         private void DataGridViewHDN_DoubleClick_1(object sender, EventArgs e)
@@ -756,6 +762,12 @@ namespace CSLT2_Suachuagiaydep
                 picAnh.Image = Image.FromFile(dlgOpen.FileName);
                 txtAnh.Text = dlgOpen.FileName;
             }
+        }
+
+        private void cboMaHDnhan_DropDown_1(object sender, EventArgs e)
+        {
+            Functions.fillcombo("SELECT mahddua FROM tblhdnhanhang", cboMaHDnhan, "mahdnhan", "mahdnhan");
+            cboMaHDnhan.SelectedIndex = -1;
         }
     }
 }

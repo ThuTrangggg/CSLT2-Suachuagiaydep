@@ -33,12 +33,16 @@
             this.txtDongia = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtGhichu = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtGiamgia = new System.Windows.Forms.TextBox();
             this.txtThanhtien = new System.Windows.Forms.TextBox();
+            this.txtGhichu = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnThemSP = new System.Windows.Forms.Button();
+            this.picAnh = new System.Windows.Forms.PictureBox();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.chkDande = new System.Windows.Forms.CheckBox();
+            this.txtAnh = new System.Windows.Forms.TextBox();
             this.chkVesinh = new System.Windows.Forms.CheckBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.chkdatra = new System.Windows.Forms.CheckBox();
@@ -88,16 +92,12 @@
             this.btnLuuhd = new System.Windows.Forms.Button();
             this.btnThemhd = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.btnThemSP = new System.Windows.Forms.Button();
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.txtAnh = new System.Windows.Forms.TextBox();
-            this.picAnh = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             this.ThongtinHD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewHDN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -145,15 +145,6 @@
             this.label14.TabIndex = 13;
             this.label14.Text = "Thành tiền";
             // 
-            // txtGhichu
-            // 
-            this.txtGhichu.Location = new System.Drawing.Point(603, 301);
-            this.txtGhichu.Margin = new System.Windows.Forms.Padding(2);
-            this.txtGhichu.Multiline = true;
-            this.txtGhichu.Name = "txtGhichu";
-            this.txtGhichu.Size = new System.Drawing.Size(174, 44);
-            this.txtGhichu.TabIndex = 20;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -181,6 +172,15 @@
             this.txtThanhtien.Name = "txtThanhtien";
             this.txtThanhtien.Size = new System.Drawing.Size(78, 20);
             this.txtThanhtien.TabIndex = 19;
+            // 
+            // txtGhichu
+            // 
+            this.txtGhichu.Location = new System.Drawing.Point(603, 301);
+            this.txtGhichu.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGhichu.Multiline = true;
+            this.txtGhichu.Name = "txtGhichu";
+            this.txtGhichu.Size = new System.Drawing.Size(174, 44);
+            this.txtGhichu.TabIndex = 20;
             // 
             // groupBox2
             // 
@@ -216,6 +216,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin mặt hàng";
             // 
+            // btnThemSP
+            // 
+            this.btnThemSP.Location = new System.Drawing.Point(205, 20);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(49, 21);
+            this.btnThemSP.TabIndex = 24;
+            this.btnThemSP.Text = "Thêm";
+            this.btnThemSP.UseVisualStyleBackColor = true;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
+            // 
+            // picAnh
+            // 
+            this.picAnh.BackColor = System.Drawing.SystemColors.Window;
+            this.picAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picAnh.Location = new System.Drawing.Point(423, 45);
+            this.picAnh.Name = "picAnh";
+            this.picAnh.Size = new System.Drawing.Size(126, 110);
+            this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAnh.TabIndex = 67;
+            this.picAnh.TabStop = false;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(421, 161);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(128, 23);
+            this.btnOpen.TabIndex = 66;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
             // chkDande
             // 
             this.chkDande.AutoSize = true;
@@ -227,6 +258,14 @@
             this.chkDande.Text = "Dán đế";
             this.chkDande.UseVisualStyleBackColor = true;
             this.chkDande.CheckedChanged += new System.EventHandler(this.chkDande_CheckedChanged);
+            // 
+            // txtAnh
+            // 
+            this.txtAnh.Location = new System.Drawing.Point(423, 20);
+            this.txtAnh.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAnh.Name = "txtAnh";
+            this.txtAnh.Size = new System.Drawing.Size(126, 20);
+            this.txtAnh.TabIndex = 21;
             // 
             // chkVesinh
             // 
@@ -628,6 +667,7 @@
             this.cboMaHDnhan.Name = "cboMaHDnhan";
             this.cboMaHDnhan.Size = new System.Drawing.Size(135, 21);
             this.cboMaHDnhan.TabIndex = 61;
+            this.cboMaHDnhan.DropDown += new System.EventHandler(this.cboMaHDnhan_DropDown_1);
             // 
             // btnTimkiem
             // 
@@ -754,45 +794,6 @@
             this.label27.TabIndex = 65;
             this.label27.Text = "HÓA ĐƠN NHẬN HÀNG";
             // 
-            // btnThemSP
-            // 
-            this.btnThemSP.Location = new System.Drawing.Point(205, 20);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(49, 21);
-            this.btnThemSP.TabIndex = 24;
-            this.btnThemSP.Text = "Thêm";
-            this.btnThemSP.UseVisualStyleBackColor = true;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Location = new System.Drawing.Point(421, 161);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(128, 23);
-            this.btnOpen.TabIndex = 66;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
-            // 
-            // txtAnh
-            // 
-            this.txtAnh.Location = new System.Drawing.Point(423, 20);
-            this.txtAnh.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAnh.Name = "txtAnh";
-            this.txtAnh.Size = new System.Drawing.Size(126, 20);
-            this.txtAnh.TabIndex = 21;
-            // 
-            // picAnh
-            // 
-            this.picAnh.BackColor = System.Drawing.SystemColors.Window;
-            this.picAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picAnh.Location = new System.Drawing.Point(423, 45);
-            this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(126, 110);
-            this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAnh.TabIndex = 67;
-            this.picAnh.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -836,10 +837,10 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
             this.ThongtinHD.ResumeLayout(false);
             this.ThongtinHD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewHDN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

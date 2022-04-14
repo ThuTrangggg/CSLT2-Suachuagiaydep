@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,13 +53,27 @@
             this.cáchSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNhom7 = new System.Windows.Forms.Label();
-            this.pic1 = new System.Windows.Forms.PictureBox();
+            this.picNhom = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
+            this.pic1 = new System.Windows.Forms.PictureBox();
             this.pic0 = new System.Windows.Forms.PictureBox();
+            this.groupboxTK = new System.Windows.Forms.GroupBox();
+            this.btnFB = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNhom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic0)).BeginInit();
+            this.groupboxTK.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -249,6 +264,8 @@
             // 
             // trợGiúpToolStripMenuItem
             // 
+            this.trợGiúpToolStripMenuItem.Checked = true;
+            this.trợGiúpToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.trợGiúpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinToolStripMenuItem,
             this.cáchSửDụngToolStripMenuItem});
@@ -267,6 +284,7 @@
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
             this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.thôngTinToolStripMenuItem.Text = "Thông tin";
+            this.thôngTinToolStripMenuItem.Click += new System.EventHandler(this.thôngTinToolStripMenuItem_Click);
             // 
             // cáchSửDụngToolStripMenuItem
             // 
@@ -297,15 +315,15 @@
             this.lblNhom7.Text = "NHÓM 7 \r\nCỬA HÀNG SPA GIÀY DÉP";
             this.lblNhom7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pic1
+            // picNhom
             // 
-            this.pic1.Image = global::CSLT2_Suachuagiaydep.Properties.Resources.giay1;
-            this.pic1.Location = new System.Drawing.Point(0, 35);
-            this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(800, 506);
-            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic1.TabIndex = 3;
-            this.pic1.TabStop = false;
+            this.picNhom.Image = global::CSLT2_Suachuagiaydep.Properties.Resources._8fa85e830060ce3e9771;
+            this.picNhom.Location = new System.Drawing.Point(-28, 35);
+            this.picNhom.Name = "picNhom";
+            this.picNhom.Size = new System.Drawing.Size(828, 422);
+            this.picNhom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNhom.TabIndex = 6;
+            this.picNhom.TabStop = false;
             // 
             // pic2
             // 
@@ -317,6 +335,16 @@
             this.pic2.TabIndex = 4;
             this.pic2.TabStop = false;
             // 
+            // pic1
+            // 
+            this.pic1.Image = global::CSLT2_Suachuagiaydep.Properties.Resources.giay1;
+            this.pic1.Location = new System.Drawing.Point(0, 35);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(800, 506);
+            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic1.TabIndex = 3;
+            this.pic1.TabStop = false;
+            // 
             // pic0
             // 
             this.pic0.Image = global::CSLT2_Suachuagiaydep.Properties.Resources.Flannel_1920x1050_desktop;
@@ -327,13 +355,142 @@
             this.pic0.TabIndex = 5;
             this.pic0.TabStop = false;
             // 
+            // groupboxTK
+            // 
+            this.groupboxTK.BackColor = System.Drawing.SystemColors.Window;
+            this.groupboxTK.Controls.Add(this.btnFB);
+            this.groupboxTK.Controls.Add(this.button1);
+            this.groupboxTK.Controls.Add(this.label1);
+            this.groupboxTK.Controls.Add(this.pictureBox1);
+            this.groupboxTK.Controls.Add(this.btnThoat);
+            this.groupboxTK.Controls.Add(this.label3);
+            this.groupboxTK.Controls.Add(this.txtPass);
+            this.groupboxTK.Controls.Add(this.btnLogin);
+            this.groupboxTK.Controls.Add(this.txtID);
+            this.groupboxTK.Location = new System.Drawing.Point(0, 0);
+            this.groupboxTK.Name = "groupboxTK";
+            this.groupboxTK.Size = new System.Drawing.Size(800, 465);
+            this.groupboxTK.TabIndex = 17;
+            this.groupboxTK.TabStop = false;
+            this.groupboxTK.Enter += new System.EventHandler(this.groupboxTK_Enter);
+            // 
+            // btnFB
+            // 
+            this.btnFB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFB.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnFB.Image = ((System.Drawing.Image)(resources.GetObject("btnFB.Image")));
+            this.btnFB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFB.Location = new System.Drawing.Point(328, 347);
+            this.btnFB.Name = "btnFB";
+            this.btnFB.Size = new System.Drawing.Size(82, 28);
+            this.btnFB.TabIndex = 18;
+            this.btnFB.Text = "Facebook";
+            this.btnFB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFB.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(430, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 28);
+            this.button1.TabIndex = 17;
+            this.button1.TabStop = false;
+            this.button1.Text = "Gmail";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(386, 316);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Or login with";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CSLT2_Suachuagiaydep.Properties.Resources.hvnh1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(348, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(138, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Location = new System.Drawing.Point(328, 381);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(182, 23);
+            this.btnThoat.TabIndex = 14;
+            this.btnThoat.Text = "&Close";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(357, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 23);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "LOGIN FORM";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(328, 206);
+            this.txtPass.Multiline = true;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(182, 42);
+            this.txtPass.TabIndex = 9;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackgroundImage = global::CSLT2_Suachuagiaydep.Properties.Resources.PURPLE4;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLogin.Location = new System.Drawing.Point(328, 254);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(182, 46);
+            this.btnLogin.TabIndex = 11;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.AllowDrop = true;
+            this.txtID.Location = new System.Drawing.Point(328, 154);
+            this.txtID.Multiline = true;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(182, 42);
+            this.txtID.TabIndex = 13;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 447);
+            this.Controls.Add(this.groupboxTK);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.picNhom);
             this.Controls.Add(this.pic2);
             this.Controls.Add(this.lblNhom7);
             this.Controls.Add(this.pic1);
@@ -344,9 +501,13 @@
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNhom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic0)).EndInit();
+            this.groupboxTK.ResumeLayout(false);
+            this.groupboxTK.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,6 +542,17 @@
         private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.PictureBox pic2;
         private System.Windows.Forms.PictureBox pic0;
+        private System.Windows.Forms.PictureBox picNhom;
+        private System.Windows.Forms.GroupBox groupboxTK;
+        private System.Windows.Forms.Button btnFB;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox txtID;
     }
 }
 

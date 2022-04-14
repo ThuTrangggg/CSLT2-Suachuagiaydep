@@ -63,6 +63,16 @@ namespace CSLT2_Suachuagiaydep.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8fa85e830060ce3e9771 {
+            get {
+                object obj = ResourceManager.GetObject("8fa85e830060ce3e9771", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add {
             get {
                 object obj = ResourceManager.GetObject("Add", resourceCulture);
@@ -213,9 +223,19 @@ namespace CSLT2_Suachuagiaydep.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fb {
+        internal static System.Drawing.Bitmap facebook {
             get {
-                object obj = ResourceManager.GetObject("fb", resourceCulture);
+                object obj = ResourceManager.GetObject("facebook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap facebook1 {
+            get {
+                object obj = ResourceManager.GetObject("facebook1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +266,26 @@ namespace CSLT2_Suachuagiaydep.Properties {
         internal static System.Drawing.Bitmap hvnh {
             get {
                 object obj = ResourceManager.GetObject("hvnh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hvnh1 {
+            get {
+                object obj = ResourceManager.GetObject("hvnh1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Limav_Flat_Gradient_Social_Github {
+            get {
+                object obj = ResourceManager.GetObject("Limav-Flat-Gradient-Social-Github", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +363,26 @@ namespace CSLT2_Suachuagiaydep.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PURPLE3 {
+            get {
+                object obj = ResourceManager.GetObject("PURPLE3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PURPLE4 {
+            get {
+                object obj = ResourceManager.GetObject("PURPLE4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save {
             get {
                 object obj = ResourceManager.GetObject("Save", resourceCulture);
@@ -346,6 +406,36 @@ namespace CSLT2_Suachuagiaydep.Properties {
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Yootheme_Social_Bookmark_Social_facebook_box_blue {
+            get {
+                object obj = ResourceManager.GetObject("Yootheme-Social-Bookmark-Social-facebook-box-blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Yootheme_Social_Bookmark_Social_facebook_box_blue1 {
+            get {
+                object obj = ResourceManager.GetObject("Yootheme-Social-Bookmark-Social-facebook-box-blue1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Yootheme_Social_Bookmark_Social_facebook_box_blue2 {
+            get {
+                object obj = ResourceManager.GetObject("Yootheme-Social-Bookmark-Social-facebook-box-blue2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

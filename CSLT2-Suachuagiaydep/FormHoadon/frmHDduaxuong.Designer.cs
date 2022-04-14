@@ -75,6 +75,9 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblBangchu = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnTimkiem = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cboMaHDdua = new System.Windows.Forms.ComboBox();
             this.btnInhoadon = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -82,9 +85,6 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnTimkiem = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cboMaHDdua = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgridHDD)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -573,6 +573,35 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin xưởng";
             // 
+            // btnTimkiem
+            // 
+            this.btnTimkiem.BackColor = System.Drawing.Color.MistyRose;
+            this.btnTimkiem.Location = new System.Drawing.Point(586, 449);
+            this.btnTimkiem.Name = "btnTimkiem";
+            this.btnTimkiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimkiem.TabIndex = 55;
+            this.btnTimkiem.Text = "Tìm kiếm";
+            this.btnTimkiem.UseVisualStyleBackColor = false;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(347, 454);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(92, 13);
+            this.label21.TabIndex = 56;
+            this.label21.Text = "Tìm kiếm hoá đơn";
+            // 
+            // cboMaHDdua
+            // 
+            this.cboMaHDdua.FormattingEnabled = true;
+            this.cboMaHDdua.Location = new System.Drawing.Point(447, 451);
+            this.cboMaHDdua.Name = "cboMaHDdua";
+            this.cboMaHDdua.Size = new System.Drawing.Size(121, 21);
+            this.cboMaHDdua.TabIndex = 57;
+            this.cboMaHDdua.DropDown += new System.EventHandler(this.cboMaHDdua_DropDown);
+            // 
             // btnInhoadon
             // 
             this.btnInhoadon.BackColor = System.Drawing.Color.MistyRose;
@@ -690,35 +719,6 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnTimkiem
-            // 
-            this.btnTimkiem.BackColor = System.Drawing.Color.MistyRose;
-            this.btnTimkiem.Location = new System.Drawing.Point(586, 449);
-            this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTimkiem.TabIndex = 55;
-            this.btnTimkiem.Text = "Tìm kiếm";
-            this.btnTimkiem.UseVisualStyleBackColor = false;
-            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(347, 454);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(92, 13);
-            this.label21.TabIndex = 56;
-            this.label21.Text = "Tìm kiếm hoá đơn";
-            // 
-            // cboMaHDdua
-            // 
-            this.cboMaHDdua.FormattingEnabled = true;
-            this.cboMaHDdua.Location = new System.Drawing.Point(447, 451);
-            this.cboMaHDdua.Name = "cboMaHDdua";
-            this.cboMaHDdua.Size = new System.Drawing.Size(121, 21);
-            this.cboMaHDdua.TabIndex = 57;
-            this.cboMaHDdua.DropDown += new System.EventHandler(this.cboMaHDdua_DropDown);
             // 
             // frmHDduaxuong
             // 

@@ -243,6 +243,7 @@ namespace CSLT2_Suachuagiaydep
             sql = "UPDATE tblSanpham SET Soluong =" + SLcon + " WHERE masp= N'" 
                 +cboMaSP.SelectedValue + "'";
             Functions.runsql(sql);
+            
             // Cập nhật lại tổng tiền cho hóa đơn bán
 
             tong = Convert.ToDouble(Functions.GetFieldValues("SELECT Tongtien FROM tblhdduaxuong " +
@@ -259,8 +260,7 @@ namespace CSLT2_Suachuagiaydep
             ResetValueGiayDep();
             btnXoa.Enabled = true;
             btnThem.Enabled = true;
-           // btn.Enabled = true;
-
+            btnInhoadon.Enabled = true;
         }
         private void ResetValueGiayDep()
         {
@@ -611,7 +611,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
         {
             Functions.fillcombo("SELECT mahddua FROM tblhdduaxuong", cboMaHDdua, "mahddua","mahddua");
             cboMaHDdua.SelectedIndex = -1;
-
         }
     }
 }

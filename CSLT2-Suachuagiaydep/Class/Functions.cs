@@ -15,7 +15,7 @@ namespace CSLT2_Suachuagiaydep
         public static void connect()
         {
             Conn = new SqlConnection();
-            connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\QuanLyGiayDep.mdf;Integrated Security=True;Connect Timeout=30";
+            connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\QuanLyGiayDep.mdf;Integrated Security=True;Connect Timeout=30";
             Conn.ConnectionString = connString;
             Conn.Open();
         }

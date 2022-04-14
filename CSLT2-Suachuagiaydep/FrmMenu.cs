@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace CSLT2_Suachuagiaydep
 {
     public partial class FrmMenu : Form
     {
         public FrmMenu()
         {
+            Functions.connect();
             InitializeComponent();
         }
 
@@ -22,6 +23,7 @@ namespace CSLT2_Suachuagiaydep
             Functions.connect();
             pic1.Visible = false;
             pic2.Visible = false;
+            picNhom.Visible = false;
         }
 
         private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,6 +137,8 @@ namespace CSLT2_Suachuagiaydep
             pic1.Visible = true;
             pic2.Visible = false;
             lblNhom7.Visible = false;
+            picNhom.Visible = false;
+
         }
 
         private void hoáĐơnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,6 +147,7 @@ namespace CSLT2_Suachuagiaydep
             pic1.Visible = false;
             pic2.Visible = true;
             lblNhom7.Visible = false;
+            picNhom.Visible = false;
 
         }
 
@@ -152,6 +157,8 @@ namespace CSLT2_Suachuagiaydep
             pic1.Visible = false;
             pic2.Visible = false;
             lblNhom7.Visible = false;
+            picNhom.Visible = false;
+
         }
 
         private void báoCáoToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -160,6 +167,7 @@ namespace CSLT2_Suachuagiaydep
             pic1.Visible = false;
             pic2.Visible = true;
             lblNhom7.Visible = false;
+            picNhom.Visible = false;
         }
 
         private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -168,6 +176,35 @@ namespace CSLT2_Suachuagiaydep
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            picNhom.Visible = true;
+        }
+
+        private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string sql = "select * from tblTK where Id = '" + txtID.Text.Trim() + "' " +
+               "and Password = '" + txtPass.Text.Trim() + "'";
+            SqlDataAdapter adptr = new SqlDataAdapter(sql, Functions.Conn);
+            DataTable lgin = new DataTable();
+            adptr.Fill(lgin);
+            if (lgin.Rows.Count == 1)
+            {
+                groupboxTK.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập lại đúng tài khoản và mật khẩu");
+                txtPass.Text = "";
+                txtID.Text = "";
+            }
+        }
+
+        private void groupboxTK_Enter(object sender, EventArgs e)
         {
 
         }

@@ -92,7 +92,7 @@
             this.btnLuuhd = new System.Windows.Forms.Button();
             this.btnThemhd = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblGhichu = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
@@ -181,6 +181,7 @@
             this.txtGhichu.Name = "txtGhichu";
             this.txtGhichu.Size = new System.Drawing.Size(174, 44);
             this.txtGhichu.TabIndex = 20;
+            this.txtGhichu.TextChanged += new System.EventHandler(this.txtGhichu_TextChanged);
             // 
             // groupBox2
             // 
@@ -794,24 +795,24 @@
             this.label27.TabIndex = 65;
             this.label27.Text = "HÓA ĐƠN NHẬN HÀNG";
             // 
-            // label1
+            // lblGhichu
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(614, 304);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Ghi chú:";
+            this.lblGhichu.AutoSize = true;
+            this.lblGhichu.BackColor = System.Drawing.SystemColors.Window;
+            this.lblGhichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGhichu.Location = new System.Drawing.Point(614, 304);
+            this.lblGhichu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGhichu.Name = "lblGhichu";
+            this.lblGhichu.Size = new System.Drawing.Size(47, 13);
+            this.lblGhichu.TabIndex = 66;
+            this.lblGhichu.Text = "Ghi chú:";
             // 
             // frmHDnhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 621);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblGhichu);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.btnXoa);
@@ -910,6 +911,6 @@
         private System.Windows.Forms.PictureBox picAnh;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.TextBox txtAnh;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGhichu;
     }
 }

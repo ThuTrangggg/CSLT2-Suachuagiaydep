@@ -24,7 +24,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
 
             this.rpvKH.RefreshReport();
             this.rpvKHmax.RefreshReport();
-            rpvKH.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoKHrpv.rdlc";
+            rpvKH.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BcaoKHrpv.rdlc";
             con.ConnectionString = Properties.Settings.Default.QuanLyGiayDepConnectionString;
         }
         private void btnThongke_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
 
         private void rdoTongtien_CheckedChanged(object sender, EventArgs e)
         {
-            rpvKHmax.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoKHmaxtongtien.rdlc";
+            rpvKHmax.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BcaoKHmaxtongtien.rdlc";
             String sql = "Select top 3 a.Makhach,Tenkhach,sum(tongtien) from tblHDnhanhang a, tblKhachhang b " +
                 "where a.Makhach = b.Makhach " +
                 "group by a.Makhach,Tenkhach order by sum(tongtien) desc";
@@ -155,7 +155,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
 
         private void rdoSoluongHD_CheckedChanged(object sender, EventArgs e)
         {
-            rpvKHmax.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoKHmaxsoluong.rdlc";
+            rpvKHmax.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BcaoKHmaxsoluong.rdlc";
             String sql = "Select top 3 a.Makhach,Tenkhach,count(mahdnhan) from tblHDnhanhang a, tblKhachhang b " +
                 "where a.Makhach = b.Makhach " +
                 "group by a.Makhach,Tenkhach order by count(mahdnhan) desc";

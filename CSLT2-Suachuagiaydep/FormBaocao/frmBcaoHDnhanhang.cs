@@ -70,14 +70,15 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
                 DataSet ds = new DataSet();
                 adp.Fill(ds);
 
-              /*  //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
-                rpvBcaoHDnhan.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
-                //Đường dẫn báo cáo
-                rpvBcaoHDnhan.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoHDnhanhangrp.rdlc";
-                //Nếu có dữ liệu
-                MessageBox.Show("Có " + ds.Tables[0].Rows.Count.ToString() + " dữ liệu thoả mãn");
-*/
+                /*  //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
+                  rpvBcaoHDnhan.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
+                  //Đường dẫn báo cáo
+                  rpvBcaoHDnhan.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoHDnhanhangrp.rdlc";
+                  //Nếu có dữ liệu
+
+  */
                 //Tạo nguồn dữ liệu cho báo cáo
+                MessageBox.Show("Có " + ds.Tables[0].Rows.Count.ToString() + " dữ liệu thoả mãn");
                 ReportDataSource rds = new ReportDataSource();
                 rds.Name = "DataSetBcaoHDnhanhang";
                 rds.Value = ds.Tables[0];
@@ -95,14 +96,15 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
                 DataSet ds = new DataSet();
                 adp.Fill(ds);
 
-               /* //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
-                rpvBcaoHDnhan.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
-                //Đường dẫn báo cáo
-                rpvBcaoHDnhan.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoHDnhanhangrp.rdlc";
-                //Nếu có dữ liệu
-                MessageBox.Show("Có " + ds.Tables[0].Rows.Count.ToString() + " dữ liệu thoả mãn");
-*/
+                /* //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
+                 rpvBcaoHDnhan.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
+                 //Đường dẫn báo cáo
+                 rpvBcaoHDnhan.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoHDnhanhangrp.rdlc";
+                 //Nếu có dữ liệu
+
+ */
                 //Tạo nguồn dữ liệu cho báo cáo
+                MessageBox.Show("Có " + ds.Tables[0].Rows.Count.ToString() + " dữ liệu thoả mãn");
                 ReportDataSource rds = new ReportDataSource();
                 rds.Name = "DataSetBcaoHDnhanhang";
                 rds.Value = ds.Tables[0];

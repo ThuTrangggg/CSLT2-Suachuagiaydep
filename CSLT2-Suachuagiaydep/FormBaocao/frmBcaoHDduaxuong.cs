@@ -23,8 +23,8 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
         {
             // TODO: This line of code loads data into the 'bcaoHDmaxtongtien._BcaoHDmaxtongtien' table. You can move, or remove it, as needed.
             this.bcaoHDmaxtongtienTableAdapter.Fill(this.bcaoHDmaxtongtien._BcaoHDmaxtongtien);
-            reportViewer1.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BaocaoHDduaxuong.rdlc";
-            rpvHDmaxtongtien.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\CSLT2-Suachuagiaydep\CSLT2-Suachuagiaydep\DatasetReport\BcaoHDmaxtongtien.rdlc";
+            reportViewer1.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BaocaoHDduaxuong.rdlc";
+            rpvHDmaxtongtien.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BcaoHDmaxtongtien.rdlc";
             // TODO: This line of code loads data into the 'baocaoHDduaxuong.tblHDduaxuong' table. You can move, or remove it, as needed.
             this.tblHDduaxuongTableAdapter.Fill(this.baocaoHDduaxuong.tblHDduaxuong);
             reportViewer1.RefreshReport();
@@ -44,7 +44,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
             //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
             reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
             //Đường dẫn báo cáo
-            reportViewer1.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BaocaoHDduaxuong.rdlc";
+            reportViewer1.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BaocaoHDduaxuong.rdlc";
             //Nếu có dữ liệu
             MessageBox.Show("Có " + ds.Tables[0].Rows.Count.ToString() + " dữ liệu thoả mãn");
 

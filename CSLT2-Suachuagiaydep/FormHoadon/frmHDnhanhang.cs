@@ -769,6 +769,11 @@ namespace CSLT2_Suachuagiaydep
             Functions.fillcombo("SELECT mahddua FROM tblhdnhanhang", cboMaHDnhan, "mahdnhan", "mahdnhan");
             cboMaHDnhan.SelectedIndex = -1;
         }
+
+        private void txtGhichu_TextChanged(object sender, EventArgs e)
+        {
+            lblGhichu.Visible = false;
+        }
     }
 }
 

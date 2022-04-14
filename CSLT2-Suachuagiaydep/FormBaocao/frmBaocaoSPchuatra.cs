@@ -24,7 +24,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
         {
             // TODO: This line of code loads data into the 'bcaoSPxuongchuatra.BcaoSPxuongchuatra' table. You can move, or remove it, as needed.
             this.bcaoSPxuongchuatraTableAdapter.Fill(this.bcaoSPxuongchuatra._BcaoSPxuongchuatra,dtpSPchuatracuahang.Value);
-            rpvSPchuatracuahang.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoSPxuongchuatra.rdlc";
+            rpvSPchuatracuahang.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BcaoSPxuongchuatra.rdlc";
             //rptSPdatra.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BaocaoSPdatra.rdlc";
             this.bcaodanhsachhdTableAdapter.Fill(this.bCaoSPchuatrakhach.Bcaodanhsachhd, dtpSPdatra.Value);
             // TODO: This line of code loads data into the 'bcaoSPdatra.Bcaodanhsachhd' table. You can move, or remove it, as needed.
@@ -52,7 +52,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
             dap.Fill(ds);
             //Thiết lập thông số liên quan đến báo cáo
             rpvSPchuatracuahang.ProcessingMode = ProcessingMode.Local; //sử dụng dữ liệu ở local
-            rpvSPchuatracuahang.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\BcaoSPxuongchuatra.rdlc";
+            rpvSPchuatracuahang.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\BcaoSPxuongchuatra.rdlc";
             MessageBox.Show("Có " + ds.Tables[0].Rows.Count.ToString() + " dữ liệu thoả mãn");
             //Tạo nguồn dữ liệu cho báo cáo
             ReportDataSource rds = new ReportDataSource();
@@ -82,7 +82,7 @@ namespace CSLT2_Suachuagiaydep.FormBaocao
             dap.Fill(ds);
             //Thiết lập thông số liên quan đến báo cáo
             rptSPdatra.ProcessingMode = ProcessingMode.Local; //sử dụng dữ liệu ở local
-            rptSPdatra.LocalReport.ReportPath = "C:\\Users\\ADMIN\\source\\repos\\CSLT2-Suachuagiaydep\\CSLT2-Suachuagiaydep\\DatasetReport\\RpBcaoSPchuatrakhach.rdlc";
+            rptSPdatra.LocalReport.ReportPath = @"C:\Users\ADMIN\source\repos\Nhóm7_CT\CSLT2-Suachuagiaydep\DatasetReport\RpBcaoSPchuatrakhach.rdlc";
             MessageBox.Show("Có " + ds.Tables[0].Rows.Count.ToString() + " dữ liệu thoả mãn");
             
             //Tạo nguồn dữ liệu cho báo cáo

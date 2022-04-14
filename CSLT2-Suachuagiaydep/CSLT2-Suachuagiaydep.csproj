@@ -219,6 +219,12 @@
       <DependentUpon>KHmaxtongtien.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TK.Designer.cs">
+      <DependentUpon>TK.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatasetReport\BcaoHDmaxtongtien.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -298,6 +304,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TK.resx">
+      <DependentUpon>TK.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DatasetReport\BcaoHDmaxtongtien.xsc">
       <DependentUpon>BcaoHDmaxtongtien.xsd</DependentUpon>
     </None>
@@ -438,6 +447,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyGiayDep.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\fb.png" />
+    <None Include="Resources\PURPLE.jpg" />
+    <None Include="Resources\download.jpeg" />
+    <None Include="Resources\photo-1579546929518-9e396f3cc809.jpeg" />
+    <None Include="Resources\hvnh.png" />
     <None Include="Resources\pic2.jpg" />
     <None Include="Resources\giay1.jpeg" />
     <None Include="Resources\downw.png" />

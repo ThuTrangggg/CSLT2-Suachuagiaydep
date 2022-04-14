@@ -183,6 +183,16 @@ namespace CSLT2_Suachuagiaydep.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download1 {
+            get {
+                object obj = ResourceManager.GetObject("download1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap downw {
             get {
                 object obj = ResourceManager.GetObject("downw", resourceCulture);
@@ -196,6 +206,16 @@ namespace CSLT2_Suachuagiaydep.Properties {
         internal static System.Drawing.Bitmap Exit {
             get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fb {
+            get {
+                object obj = ResourceManager.GetObject("fb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +243,29 @@ namespace CSLT2_Suachuagiaydep.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hvnh {
+            get {
+                object obj = ResourceManager.GetObject("hvnh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Modify {
             get {
                 object obj = ResourceManager.GetObject("Modify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap photo_1579546929518_9e396f3cc809 {
+            get {
+                object obj = ResourceManager.GetObject("photo-1579546929518-9e396f3cc809", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +286,36 @@ namespace CSLT2_Suachuagiaydep.Properties {
         internal static System.Drawing.Bitmap Print {
             get {
                 object obj = ResourceManager.GetObject("Print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PURPLE {
+            get {
+                object obj = ResourceManager.GetObject("PURPLE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PURPLE1 {
+            get {
+                object obj = ResourceManager.GetObject("PURPLE1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PURPLE2 {
+            get {
+                object obj = ResourceManager.GetObject("PURPLE2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

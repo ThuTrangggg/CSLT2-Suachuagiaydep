@@ -166,5 +166,10 @@ namespace CSLT2_Suachuagiaydep
         {
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
